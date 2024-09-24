@@ -37,7 +37,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-24 22:50:06+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-09-24 23:21:13+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -125,7 +125,7 @@ ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:46:54: 
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000437 secs. (436.55 microseconds) 
+; took 0.000447 secs. (446.84 microseconds) 
 
   !(assertEqual 
     (unique (superpose (a b b c c c d))) 
@@ -152,7 +152,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000399 secs. (399.06 microseconds) 
+; took 0.000401 secs. (400.63 microseconds) 
 
   !(assertEqual 
     (unique (superpose (a b c d))) 
@@ -179,7 +179,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000265 secs. (265.18 microseconds) 
+; took 0.000291 secs. (290.60 microseconds) 
 
   !(assertEqual 
     (unique (superpose (a))) 
@@ -206,7 +206,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000239 secs. (238.86 microseconds) 
+; took 0.000239 secs. (238.69 microseconds) 
 
   !(assertEqual 
     (unique (superpose ())) 
@@ -231,7 +231,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000317 secs. (317.18 microseconds) 
+; took 0.000268 secs. (267.96 microseconds) 
 
   !(assertEqual 
     (unique (superpose (a a a a))) 
@@ -258,7 +258,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.06</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.34 milliseconds) 
+; took 0.001 secs. (1.32 milliseconds) 
 
   !(assertEqual 
     (unique (superpose ((1 2) (1 2) (3 4)))) 
@@ -285,7 +285,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000305 secs. (304.82 microseconds) 
+; took 0.000336 secs. (335.53 microseconds) 
 
   !(assertEqual 
     (unique (superpose (1 "hello" 1 "world" "hello" 3.14 3.14))) 
@@ -312,7 +312,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.08</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.01 milliseconds) 
+; took 0.001 secs. (1.10 milliseconds) 
 
   !(assertEqual 
     (list-to-set (a b b c c c d)) 
@@ -339,7 +339,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.09</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.18 milliseconds) 
+; took 0.003 secs. (3.37 milliseconds) 
 
   !(assertEqual 
     (list-to-set ((1 2) (1 2) (3 4))) 
@@ -366,7 +366,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000308 secs. (307.72 microseconds) 
+; took 0.000375 secs. (374.60 microseconds) 
 
   !(assertEqual 
     (unique (superpose ($x $y $x $z))) 
@@ -393,7 +393,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.11</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.82 milliseconds) 
+; took 0.002 secs. (1.96 milliseconds) 
 
   !(assertEqual 
     (unique (superpose ((:: $x $y) (:: $x $z) (:: $x $y) (:: $a $b)))) 
@@ -424,7 +424,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.12</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.41 milliseconds) 
+; took 0.002 secs. (1.54 milliseconds) 
 
   !(assertEqual 
     (unique (superpose ((:: $x $y) (:: $x $y) (:: $x $z) (:: $x $y)))) 
@@ -451,7 +451,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.13</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (2.94 milliseconds) 
+; took 0.003 secs. (2.99 milliseconds) 
 
   !(assertEqual 
     (unique (superpose ((:: 1 $x) (:: $x "hello") (:: 1 $x) (:: $y $z) (:: $x "hello")))) 
@@ -482,7 +482,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.14</h3>
 ; 
 ; EVAL TEST
-; took 0.005 secs. (4.85 milliseconds) 
+; took 0.005 secs. (4.99 milliseconds) 
 
   !(assertEqual 
     (unique (superpose ((:: $x (:: a b)) (:: $x (:: a b)) (:: (:: 1 $x) (:: 2 $y)) (:: (:: 1 $x) (:: 2 $y))))) 
@@ -499,7 +499,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 788,578 inferences, 0.138 CPU in 0.138 seconds (100% CPU, 5705898 Lips)
+>% 788,578 inferences, 0.140 CPU in 0.140 seconds (100% CPU, 5646199 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/unique_test.metta  0)
 <span class="ansi1"
@@ -534,7 +534,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-24 22:50:11+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-24 23:21:18+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
