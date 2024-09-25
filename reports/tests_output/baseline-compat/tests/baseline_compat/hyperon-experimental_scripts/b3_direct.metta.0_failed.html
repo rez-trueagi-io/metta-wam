@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -70,7 +69,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-24 23:41:29+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-09-25 12:47:27+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -79,12 +78,7 @@ Script started on 2024-09-24 23:41:29+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-Verbosity set to level 1  
-Argv=['']  
-<span class="ansi1 ansi31"
->
-ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:46:54: Syntax error: Operator expected
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -184,7 +178,7 @@ ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:46:54: 
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B3-DIRECT.01</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.01 milliseconds) 
+; took 0.001 secs. (1.13 milliseconds) 
 
   !(assertEqual 
     (green Fritz) T)
@@ -302,7 +296,7 @@ true]
 >          |     <--Fritz </span>
 ; 
 ; EVAL TEST
-; took 0.023 secs. (23.39 milliseconds) 
+; took 0.022 secs. (22.32 milliseconds) 
 
   !(assertEqual 
     (ift 
@@ -343,7 +337,7 @@ Deterministic: ()
 >    1:1   |   |-<--eat_flies </span>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.45 milliseconds) 
+; took 0.002 secs. (2.38 milliseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -362,7 +356,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 331,522 inferences, 0.070 CPU in 0.070 seconds (100% CPU, 4708337 Lips)
+>% 350,196 inferences, 0.093 CPU in 0.093 seconds (100% CPU, 3777888 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/b3_direct.metta  0)
 <span class="ansi1"
@@ -397,7 +391,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-24 23:41:34+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-25 12:47:32+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

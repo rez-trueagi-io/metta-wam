@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -76,7 +75,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-24 23:39:55+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-09-25 12:46:00+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -85,12 +84,7 @@ Script started on 2024-09-24 23:39:55+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-Verbosity set to level 1  
-Argv=['']  
-<span class="ansi1 ansi31"
->
-ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:46:54: Syntax error: Operator expected
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -301,7 +295,7 @@ Deterministic: ()
         (VarIdx (S Z)))))
 </span>; 
 ; EVAL TEST
-; took 0.004 secs. (3.78 milliseconds) 
+; took 0.004 secs. (3.50 milliseconds) 
 
   !(assertEqualToResult 
     (let $sptrn 
@@ -362,7 +356,7 @@ Deterministic: ()
           (countNat $_229034)))))
 </span>; 
 ; EVAL TEST
-; took 0.007 secs. (7.15 milliseconds) 
+; took 0.007 secs. (6.59 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &kb 
@@ -413,7 +407,7 @@ Deterministic: ()
 >  (Inheritance B A)
 </span>; 
 ; EVAL TEST
-; took 0.002 secs. (2.07 milliseconds) 
+; took 0.002 secs. (1.91 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &db 
@@ -448,7 +442,7 @@ Deterministic: ()
 >  (Inheritance C A)
 </span>; 
 ; EVAL TEST
-; took 0.002 secs. (2.03 milliseconds) 
+; took 0.002 secs. (1.78 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &db 
@@ -483,7 +477,7 @@ Deterministic: ()
 >  (Inheritance D E)
 </span>; 
 ; EVAL TEST
-; took 0.002 secs. (2.04 milliseconds) 
+; took 0.002 secs. (1.83 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &db 
@@ -518,7 +512,7 @@ Deterministic: ()
 >  (Inheritance C E)
 </span>; 
 ; EVAL TEST
-; took 0.001 secs. (1.42 milliseconds) 
+; took 0.001 secs. (1.35 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &db 
@@ -648,7 +642,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.METTALOGTESTCURRIED2.07</h3>
 ; 
 ; EVAL TEST
-; took 0.038 secs. (37.76 milliseconds) 
+; took 0.038 secs. (38.17 milliseconds) 
 
   !(assertEqualToResult 
     (let 
@@ -712,7 +706,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 804,580 inferences, 0.179 CPU in 0.179 seconds (100% CPU, 4491749 Lips)
+>% 823,245 inferences, 0.201 CPU in 0.201 seconds (100% CPU, 4097848 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/mettalogTestCurried2.metta  0)
 <span class="ansi1"
@@ -747,7 +741,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-24 23:40:00+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-25 12:46:05+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

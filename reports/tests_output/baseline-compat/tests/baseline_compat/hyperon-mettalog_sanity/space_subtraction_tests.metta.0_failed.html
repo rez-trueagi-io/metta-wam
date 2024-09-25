@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -45,7 +44,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-24 23:45:52+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-09-25 12:51:32+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -54,12 +53,7 @@ Script started on 2024-09-24 23:45:52+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-Verbosity set to level 1  
-Argv=['']  
-<span class="ansi1 ansi31"
->
-ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:46:54: Syntax error: Operator expected
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -190,7 +184,7 @@ Deterministic: ()
 >  (superpose ((foo $_112330 $_112352) (foo 1 2) (foo 3 4) (foo $_112330 10) (foo $_112330 $_112330)))
 </span>; 
 ; EVAL TEST
-; took 0.008 secs. (7.60 milliseconds) 
+; took 0.006 secs. (6.34 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &space31 
@@ -226,7 +220,7 @@ Deterministic: ()
 >  (superpose ((foo 1 2) (foo 5 6) (foo $_143400 $_143422)))
 </span>; 
 ; EVAL TEST
-; took 0.004 secs. (3.52 milliseconds) 
+; took 0.003 secs. (3.18 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &space32 
@@ -262,7 +256,7 @@ Deterministic: ()
 >  (superpose ((foo 3 4) (foo 5 6)))
 </span>; 
 ; EVAL TEST
-; took 0.001 secs. (1.46 milliseconds) 
+; took 0.001 secs. (1.32 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &space33 
@@ -293,7 +287,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.04</h3>
 ; 
 ; EVAL TEST
-; took 0.061 secs. (61.37 milliseconds) 
+; took 0.061 secs. (60.98 milliseconds) 
 
   !(assertEqual 
     (subtraction 
@@ -328,7 +322,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.05</h3>
 ; 
 ; EVAL TEST
-; took 0.014 secs. (13.69 milliseconds) 
+; took 0.014 secs. (13.91 milliseconds) 
 
   !(assertEqual 
     (subtraction 
@@ -365,7 +359,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000302 secs. (301.59 microseconds) 
+; took 0.000306 secs. (306.33 microseconds) 
 
   !(assertEqual 
     (subtraction 
@@ -395,7 +389,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.07</h3>
 ; 
 ; EVAL TEST
-; took 0.010 secs. (9.63 milliseconds) 
+; took 0.010 secs. (9.79 milliseconds) 
 
   !(assertEqual 
     (union 
@@ -436,7 +430,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.08</h3>
 ; 
 ; EVAL TEST
-; took 0.008 secs. (8.07 milliseconds) 
+; took 0.008 secs. (8.39 milliseconds) 
 
   !(assertEqual 
     (union 
@@ -473,7 +467,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.09</h3>
 ; 
 ; EVAL TEST
-; took 0.009 secs. (9.34 milliseconds) 
+; took 0.010 secs. (9.55 milliseconds) 
 
   !(assertEqual 
     (union 
@@ -514,7 +508,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.10</h3>
 ; 
 ; EVAL TEST
-; took 0.008 secs. (8.21 milliseconds) 
+; took 0.008 secs. (8.44 milliseconds) 
 
   !(assertEqual 
     (union 
@@ -555,7 +549,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.11</h3>
 ; 
 ; EVAL TEST
-; took 0.007 secs. (6.52 milliseconds) 
+; took 0.006 secs. (6.47 milliseconds) 
 
   !(assertEqual 
     (union 
@@ -580,7 +574,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 1,182,525 inferences, 0.299 CPU in 0.299 seconds (100% CPU, 3951016 Lips)
+>% 1,201,208 inferences, 0.310 CPU in 0.310 seconds (100% CPU, 3878580 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/space_subtraction_tests.metta  0)
 <span class="ansi1"
@@ -615,7 +609,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-24 23:45:57+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-25 12:51:37+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

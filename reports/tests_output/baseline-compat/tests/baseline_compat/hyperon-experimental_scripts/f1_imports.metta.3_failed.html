@@ -150,7 +150,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-24 23:43:09+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-09-25 12:49:01+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -159,12 +159,7 @@ Script started on 2024-09-24 23:43:09+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-Verbosity set to level 1  
-Argv=['']  
-<span class="ansi1 ansi31"
->
-ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:46:54: Syntax error: Operator expected
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -256,7 +251,7 @@ ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:46:54: 
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000159 secs. (159.18 microseconds) 
+; took 0.000175 secs. (175.43 microseconds) 
 
   !(assertEqualToResult 
     (get-type &self) 
@@ -283,7 +278,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.74 milliseconds) 
+; took 0.002 secs. (1.68 milliseconds) 
 
   !(assertEqual 
     ( (let $x 
@@ -311,7 +306,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000267 secs. (267.14 microseconds) 
+; took 0.000242 secs. (241.98 microseconds) 
 
   !(assertEqual 
     (if 
@@ -388,7 +383,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-MODULEA.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000208 secs. (208.06 microseconds) 
+; took 0.000185 secs. (185.47 microseconds) 
 
   !(assertEqual 
     (+ 1 2) 3)
@@ -409,7 +404,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-MODULEA.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000129 secs. (129.48 microseconds) 
+; took 0.000146 secs. (146.31 microseconds) 
 
   !(assertEqual 
     (if True "S" "F") "S")
@@ -473,7 +468,7 @@ Last Result(2): ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.06</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.95 milliseconds) 
+; took 0.002 secs. (1.79 milliseconds) 
 
   !(assertEqual 
     (match &m 
@@ -563,7 +558,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-MODULEA.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000204 secs. (203.82 microseconds) 
+; took 0.000166 secs. (166.30 microseconds) 
 
   !(assertEqual 
     (+ 1 2) 3)
@@ -584,7 +579,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-MODULEA.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000136 secs. (136.42 microseconds) 
+; took 0.000138 secs. (138.47 microseconds) 
 
   !(assertEqual 
     (if True "S" "F") "S")
@@ -694,7 +689,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-MODULEA.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000216 secs. (216.47 microseconds) 
+; took 0.000180 secs. (179.82 microseconds) 
 
   !(assertEqual 
     (+ 1 2) 3)
@@ -715,7 +710,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-MODULEA.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000128 secs. (128.04 microseconds) 
+; took 0.000147 secs. (147.19 microseconds) 
 
   !(assertEqual 
     (if True "S" "F") "S")
@@ -758,7 +753,7 @@ Last Result(2): ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000586 secs. (585.60 microseconds) 
+; took 0.000413 secs. (413.32 microseconds) 
 
   !(assertEqual 
     (g 2) 102)
@@ -781,7 +776,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000898 secs. (897.63 microseconds) 
+; took 0.000755 secs. (755.22 microseconds) 
 
   !(assertEqual 
     (f 2) 103)
@@ -813,7 +808,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.13</h3>
 ; 
 ; EVAL TEST
-; took 0.005 secs. (5.15 milliseconds) 
+; took 0.005 secs. (4.83 milliseconds) 
 
   !(assertEqual &m 
     (let* 
@@ -848,7 +843,7 @@ Deterministic: ((Error  (got  (&m)) (expected  ((: __g (-> Number))))))
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.14</h3>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (4.12 milliseconds) 
+; took 0.004 secs. (3.97 milliseconds) 
 
   !(assertEqual 
     (== 
@@ -877,7 +872,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.15</h3>
 ; 
 ; EVAL TEST
-; took 0.000280 secs. (279.55 microseconds) 
+; took 0.000219 secs. (218.64 microseconds) 
 
   !(assertEqual 
     (if 
@@ -1011,7 +1006,7 @@ Last Result(2): ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.16</h3>
 ; 
 ; EVAL TEST
-; took 0.000566 secs. (566.49 microseconds) 
+; took 0.000434 secs. (433.81 microseconds) 
 
   !(assertEqual 
     (g 2) 102)
@@ -1034,7 +1029,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.17</h3>
 ; 
 ; EVAL TEST
-; took 0.000849 secs. (849.22 microseconds) 
+; took 0.000759 secs. (759.29 microseconds) 
 
   !(assertEqual 
     (f 2) 103)
@@ -1060,7 +1055,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.18</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.06 milliseconds) 
+; took 0.000950 secs. (950.21 microseconds) 
 
   !(assertEqualToResult 
     (dup 2) 
@@ -1338,7 +1333,7 @@ Last Result(2): ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.19</h3>
 ; 
 ; EVAL TEST
-; took 0.000570 secs. (569.52 microseconds) 
+; took 0.000495 secs. (494.84 microseconds) 
 
   !(assertEqual 
     (g 2) 102)
@@ -1361,7 +1356,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.20</h3>
 ; 
 ; EVAL TEST
-; took 0.000835 secs. (835.22 microseconds) 
+; took 0.000816 secs. (815.55 microseconds) 
 
   !(assertEqual 
     (f 2) 103)
@@ -1400,7 +1395,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 1,277,516 inferences, 0.264 CPU in 0.264 seconds (100% CPU, 4847295 Lips)
+>% 1,296,192 inferences, 0.277 CPU in 0.277 seconds (100% CPU, 4675426 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/f1_imports.metta  0)
 <span class="ansi1"
@@ -1435,7 +1430,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-24 23:43:15+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-25 12:49:06+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -35,7 +34,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-24 23:43:53+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-09-25 12:49:41+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -44,12 +43,7 @@ Script started on 2024-09-24 23:43:53+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-Verbosity set to level 1  
-Argv=['']  
-<span class="ansi1 ansi31"
->
-ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:46:54: Syntax error: Operator expected
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -156,7 +150,7 @@ ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:46:54: 
 >;; HYPERON-METTALOG-SANITY.03-SORING-VIA-INSERT.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000200 secs. (199.88 microseconds) 
+; took 0.000174 secs. (173.89 microseconds) 
 
   !(assertEqualToResult 
     (get-type insert) 
@@ -167,12 +161,12 @@ ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:46:54: 
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (-> $_587538 
-          (List $_587538) 
-          (List $_587538))) 
-      ( (-> $_580868 
-          (List $_580868) 
-          (List $_580868)))))
+      ( (-> $_613634 
+          (List $_613634) 
+          (List $_613634))) 
+      ( (-> $_606964 
+          (List $_606964) 
+          (List $_606964)))))
 </span>
 Deterministic: ()
 ()]
@@ -203,7 +197,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.03-SORING-VIA-INSERT.02</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.43 milliseconds) 
+; took 0.002 secs. (2.45 milliseconds) 
 
   !(assertEqual 
     (insert 2 
@@ -232,7 +226,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.03-SORING-VIA-INSERT.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000465 secs. (464.88 microseconds) 
+; took 0.000350 secs. (349.79 microseconds) 
 
   !(assertEqual 
     (Cons 1 Nil) 
@@ -257,7 +251,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.03-SORING-VIA-INSERT.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000597 secs. (597.42 microseconds) 
+; took 0.000591 secs. (590.54 microseconds) 
 
   !(assertEqual 
     (insert 1 Nil) 
@@ -284,7 +278,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.03-SORING-VIA-INSERT.05</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.80 milliseconds) 
+; took 0.002 secs. (1.84 milliseconds) 
 
   !(assertEqual 
     (insert 1 
@@ -317,7 +311,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.03-SORING-VIA-INSERT.06</h3>
 ; 
 ; EVAL TEST
-; took 0.006 secs. (5.96 milliseconds) 
+; took 0.006 secs. (5.83 milliseconds) 
 
   !(assertEqual 
     (insert 3 
@@ -340,7 +334,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 334,996 inferences, 0.068 CPU in 0.068 seconds (100% CPU, 4897721 Lips)
+>% 353,679 inferences, 0.092 CPU in 0.092 seconds (100% CPU, 3838876 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/03-soring-via-insert.metta  0)
 <span class="ansi1"
@@ -375,7 +369,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-24 23:43:58+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-25 12:49:46+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
