@@ -37,7 +37,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-26 18:15:21+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-09-26 21:03:19+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -161,7 +161,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000735 secs. (734.81 microseconds) 
+; took 0.000595 secs. (595.32 microseconds) 
 
   !(assertEqual 
     (get-state (get-token)) 
@@ -190,7 +190,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000570 secs. (569.52 microseconds) 
+; took 0.000511 secs. (511.34 microseconds) 
 
   !(assertEqual 
     (get-token) 
@@ -200,9 +200,9 @@ Deterministic: ()
 >  (loonit_success  
     (equal_enough_for_test  
       ( (State  
-          (A B) $_118222)) 
+          (A B) $_118228)) 
       ( (State  
-          (A B) $_121414))))
+          (A B) $_121420))))
 </span>
 Deterministic: ()
 ()]
@@ -222,7 +222,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000648 secs. (648.17 microseconds) 
+; took 0.000588 secs. (587.96 microseconds) 
 
   !(assertEqual 
     (get-type (new-state 2)) 
@@ -247,7 +247,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000648 secs. (648.24 microseconds) 
+; took 0.000630 secs. (629.54 microseconds) 
 
   !(assertEqual 
     (get-type (change-state! (new-state "S") "V")) 
@@ -275,7 +275,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000636 secs. (635.58 microseconds) 
+; took 0.000644 secs. (644.22 microseconds) 
 
   !(assertEqual 
     (let $v 
@@ -303,7 +303,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000560 secs. (559.65 microseconds) 
+; took 0.000564 secs. (564.44 microseconds) 
 
   !(assertEqual 
     (get-type &state-token) 
@@ -335,7 +335,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000217 secs. (217.46 microseconds) 
+; took 0.000205 secs. (204.50 microseconds) 
 
   !(assertEqual 
     (change-state! &state-token 1) 
@@ -344,13 +344,13 @@ Deterministic: ()
 <span class="ansi31"
 >  (loonit_failureR  
     (equal_enough_for_test  
-      ( (State  1 $_248156)) 
+      ( (State  1 $_248162)) 
       ( (Error 1 BadType))))
 </span>
-Deterministic: ((Error  (got  ((State  1 $_248156))) (expected  ((Error 1 BadType)))))
+Deterministic: ((Error  (got  ((State  1 $_248162))) (expected  ((Error 1 BadType)))))
   ( (Error  
       (got  
-        ( (State  1 $_248156))) 
+        ( (State  1 $_248162))) 
       (expected  
 
         ( (Error 1 BadType)))))]
@@ -368,7 +368,7 @@ Deterministic: ((Error  (got  ((State  1 $_248156))) (expected  ((Error 1 BadTyp
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000263 secs. (262.84 microseconds) 
+; took 0.000211 secs. (211.11 microseconds) 
 
   !(assertEqual 
     (change-state! 
@@ -378,13 +378,13 @@ Deterministic: ((Error  (got  ((State  1 $_248156))) (expected  ((Error 1 BadTyp
 <span class="ansi31"
 >  (loonit_failureR  
     (equal_enough_for_test  
-      ( (State  "S" $_277742)) 
+      ( (State  "S" $_277748)) 
       ( (Error "S" BadType))))
 </span>
-Deterministic: ((Error  (got  ((State  "S" $_277742))) (expected  ((Error "S" BadType)))))
+Deterministic: ((Error  (got  ((State  "S" $_277748))) (expected  ((Error "S" BadType)))))
   ( (Error  
       (got  
-        ( (State  "S" $_277742))) 
+        ( (State  "S" $_277748))) 
       (expected  
 
         ( (Error "S" BadType)))))]
@@ -410,7 +410,7 @@ Deterministic: ((Error  (got  ((State  "S" $_277742))) (expected  ((Error "S" Ba
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000450 secs. (449.74 microseconds) 
+; took 0.000467 secs. (466.62 microseconds) 
 
   !(assertEqualToResult 
     (nop (change-state! &state-token (C D))) 
@@ -436,7 +436,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000594 secs. (594.18 microseconds) 
+; took 0.000618 secs. (617.65 microseconds) 
 
   !(assertEqual 
     (get-state (get-token)) 
@@ -470,7 +470,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000656 secs. (656.31 microseconds) 
+; took 0.000671 secs. (670.51 microseconds) 
 
   !(assertEqual 
     (let $x 
@@ -483,8 +483,8 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (State  2 $_371498)) 
-      ( (State  2 $_372902))))
+      ( (State  2 $_371504)) 
+      ( (State  2 $_372908))))
 </span>
 Deterministic: ()
 ()]
@@ -502,7 +502,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000295 secs. (294.61 microseconds) 
+; took 0.000300 secs. (299.77 microseconds) 
 
   !(assertEqual 
     (let $tnso 
@@ -512,14 +512,14 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (State  1 $_394616)) 
-      ( (State  1 $_396020))))
+      ( (State  1 $_394622)) 
+      ( (State  1 $_396026))))
 </span>
 Deterministic: ()
 ()]
 ;;; FIXME: doesn't work as for 25 May 2023
 <span class="ansi32"
->% 512,391 inferences, 0.120 CPU in 0.120 seconds (100% CPU, 4262706 Lips)
+>% 512,395 inferences, 0.120 CPU in 0.120 seconds (100% CPU, 4258088 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/e2_states.metta  0)
 <span class="ansi1"
@@ -554,7 +554,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-26 18:15:26+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-26 21:03:25+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
