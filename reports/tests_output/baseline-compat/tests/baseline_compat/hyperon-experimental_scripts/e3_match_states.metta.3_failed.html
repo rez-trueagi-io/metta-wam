@@ -37,7 +37,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-29 07:56:23+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-09-29 11:23:58+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -46,14 +46,7 @@ Script started on 2024-09-29 07:56:23+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi31"
->
-Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:1532:
-Warning:    Singleton variables: [Metta,SExprParser]
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:1540:
-Warning:    Singleton variables: [Metta]
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -172,7 +165,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E3-MATCH-STATES.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000506 secs. (506.00 microseconds) 
+; took 0.000520 secs. (519.96 microseconds) 
 
   !(assertEqual 
     (get-state (status (Goal lunch-order))) inactive)
@@ -206,7 +199,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E3-MATCH-STATES.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000482 secs. (482.04 microseconds) 
+; took 0.000504 secs. (504.47 microseconds) 
 
   !(assertEqualToResult 
     (nop (change-state! (status (Goal lunch-order)) active)) 
@@ -235,7 +228,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E3-MATCH-STATES.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000418 secs. (418.22 microseconds) 
+; took 0.000523 secs. (523.33 microseconds) 
 
   !(assertEqual 
     (get-state (status (Goal lunch-order))) active)
@@ -276,7 +269,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E3-MATCH-STATES.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000282 secs. (282.15 microseconds) 
+; took 0.000322 secs. (322.32 microseconds) 
 
   !(assertEqualToResult 
     (nop (change-state! &state-active inactive)) 
@@ -306,7 +299,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E3-MATCH-STATES.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000144 secs. (144.09 microseconds) 
+; took 0.000158 secs. (158.17 microseconds) 
 
   !(assertEqual 
     (match &self 
@@ -335,7 +328,7 @@ Deterministic: ((Error  (got  ()) (expected  (meditation))))
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E3-MATCH-STATES.06</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.18 milliseconds) 
+; took 0.001 secs. (1.32 milliseconds) 
 
   !(assertEqual 
     (if 
@@ -351,7 +344,7 @@ Deterministic: ((Error  (got  ()) (expected  (meditation))))
 Deterministic: ((Error  (got  ()) (expected  (lunch-order))))
 ((Error  (got  ()) (expected  (lunch-order))))]
 <span class="ansi32"
->% 309,539 inferences, 0.085 CPU in 0.085 seconds (100% CPU, 3621648 Lips)
+>% 309,542 inferences, 0.088 CPU in 0.088 seconds (100% CPU, 3533431 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/e3_match_states.metta  0)
 <span class="ansi1"
@@ -386,7 +379,7 @@ Deterministic: ((Error  (got  ()) (expected  (lunch-order))))
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-29 07:56:28+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-29 11:24:03+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

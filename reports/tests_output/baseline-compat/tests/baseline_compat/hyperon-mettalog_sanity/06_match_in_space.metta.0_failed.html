@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -36,7 +35,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-29 07:57:20+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-09-29 11:24:55+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -45,14 +44,7 @@ Script started on 2024-09-29 07:57:20+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi31"
->
-Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:1532:
-Warning:    Singleton variables: [Metta,SExprParser]
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:1540:
-Warning:    Singleton variables: [Metta]
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -149,7 +141,7 @@ Deterministic: ()
 >  (SS-P_AS A_AS B_AS)
 </span>; 
 ; EVAL TEST
-; took 0.002 secs. (1.70 milliseconds) 
+; took 0.002 secs. (1.68 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &kb 
@@ -184,7 +176,7 @@ Deterministic: ()
 >  (SS-Q_AS A_AS C_AS)
 </span>; 
 ; EVAL TEST
-; took 0.002 secs. (1.80 milliseconds) 
+; took 0.002 secs. (1.71 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &kb 
@@ -216,7 +208,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.06-MATCH-IN-SPACE.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000666 secs. (666.30 microseconds) 
+; took 0.000586 secs. (586.31 microseconds) 
 
   !(assertEqualToResult 
     (match &kb 
@@ -246,7 +238,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.06-MATCH-IN-SPACE.04</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.07 milliseconds) 
+; took 0.000999 secs. (998.93 microseconds) 
 
   !(assertEqual 
     (match &kb 
@@ -278,7 +270,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.06-MATCH-IN-SPACE.05</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.59 milliseconds) 
+; took 0.002 secs. (1.53 milliseconds) 
 
   !(assertEqual 
     (superpose ((P_AS B_AS) (Q_AS C_AS))) 
@@ -313,7 +305,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.06-MATCH-IN-SPACE.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000292 secs. (291.97 microseconds) 
+; took 0.000258 secs. (257.83 microseconds) 
 
   !(assertEqual 
     (case 
@@ -333,7 +325,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 267,897 inferences, 0.078 CPU in 0.078 seconds (100% CPU, 3447842 Lips)
+>% 267,902 inferences, 0.078 CPU in 0.078 seconds (100% CPU, 3428008 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/06_match_in_space.metta  0)
 <span class="ansi1"
@@ -368,7 +360,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-29 07:57:25+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-29 11:25:00+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
