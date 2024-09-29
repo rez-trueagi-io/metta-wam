@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -69,7 +70,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-28 10:17:20+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-09-29 07:51:13+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -78,7 +79,14 @@ Script started on 2024-09-28 10:17:20+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi31"
+>
+Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:1532:
+Warning:    Singleton variables: [Metta,SExprParser]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:1540:
+Warning:    Singleton variables: [Metta]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -329,7 +337,7 @@ Deterministic: ()
     (nums 2 3))
 </span>; 
 ; EVAL TEST
-; took 0.002 secs. (1.82 milliseconds) 
+; took 0.002 secs. (1.89 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &kb 
@@ -413,7 +421,7 @@ Deterministic: ()
       (rule1output $_4566 $_4584)))
 </span>; 
 ; EVAL TEST
-; took 0.005 secs. (5.27 milliseconds) 
+; took 0.005 secs. (5.10 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &kb 
@@ -514,7 +522,7 @@ Deterministic: ()
         (less $_4734 $_4752))))
 </span>; 
 ; EVAL TEST
-; took 0.007 secs. (7.24 milliseconds) 
+; took 0.007 secs. (6.99 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &kb 
@@ -670,7 +678,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.BCHAIN-COMP.04</h3>
 ; 
 ; EVAL TEST
-; took 0.006 secs. (6.00 milliseconds) 
+; took 0.006 secs. (6.08 milliseconds) 
 
   !(assertEqualToResult 
     (bc 
@@ -723,7 +731,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.BCHAIN-COMP.05</h3>
 ; 
 ; EVAL TEST
-; took 0.005 secs. (4.95 milliseconds) 
+; took 0.005 secs. (5.01 milliseconds) 
 
   !(assertEqualToResult 
     (bc 
@@ -799,7 +807,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.BCHAIN-COMP.06</h3>
 ; 
 ; EVAL TEST
-; took 0.018 secs. (17.69 milliseconds) 
+; took 0.018 secs. (17.80 milliseconds) 
 
   !(assertEqualToResult 
     (bc 
@@ -823,7 +831,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 3,176,065 inferences, 0.355 CPU in 0.355 seconds (100% CPU, 8951294 Lips)
+>% 3,176,062 inferences, 0.359 CPU in 0.359 seconds (100% CPU, 8849009 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/bchain_comp.metta  0)
 <span class="ansi1"
@@ -858,7 +866,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-28 10:17:26+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-29 07:51:18+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

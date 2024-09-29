@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165009 { color: #FFA509; }
@@ -32,7 +33,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-28 10:29:56+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-09-29 08:04:33+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -41,7 +42,14 @@ Script started on 2024-09-28 10:29:56+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi31"
+>
+Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:1532:
+Warning:    Singleton variables: [Metta,SExprParser]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:1540:
+Warning:    Singleton variables: [Metta]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -119,7 +127,7 @@ Script started on 2024-09-28 10:29:56+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; METTA-MORPH-TESTS.SUPERPOSE-NESTED.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000176 secs. (176.25 microseconds) 
+; took 0.000184 secs. (183.68 microseconds) 
 
   !(assertEqualToResult 
     (superpose (a b c)) 
@@ -149,7 +157,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SUPERPOSE-NESTED.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000228 secs. (228.03 microseconds) 
+; took 0.000272 secs. (271.82 microseconds) 
 
   !(assertEqualToResult 
     (superpose ((superpose (a b c)))) 
@@ -179,7 +187,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SUPERPOSE-NESTED.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000344 secs. (343.56 microseconds) 
+; took 0.000313 secs. (313.26 microseconds) 
 
   !(assertEqualToResult 
     (superpose ((superpose (a b c)) (superpose (x y z)))) 
@@ -209,7 +217,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SUPERPOSE-NESTED.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000273 secs. (273.31 microseconds) 
+; took 0.000248 secs. (247.57 microseconds) 
 
   !(assertEqualToResult 
     (superpose ((superpose (a b c)) x y z)) 
@@ -224,7 +232,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 166,610 inferences, 0.056 CPU in 0.056 seconds (100% CPU, 2985475 Lips)
+>% 166,611 inferences, 0.056 CPU in 0.056 seconds (100% CPU, 2976503 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/superpose_nested.metta  0)
 <span class="ansi1"
@@ -259,7 +267,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-28 10:30:01+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-29 08:04:38+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

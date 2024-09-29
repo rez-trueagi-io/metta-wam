@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -28,7 +29,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-28 10:27:35+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-09-29 08:01:59+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -37,7 +38,14 @@ Script started on 2024-09-28 10:27:35+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi31"
+>
+Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:1532:
+Warning:    Singleton variables: [Metta,SExprParser]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:1540:
+Warning:    Singleton variables: [Metta]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -131,7 +139,7 @@ Script started on 2024-09-28 10:27:35+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; METTA-MORPH-TESTS.AND-OR.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000404 secs. (404.49 microseconds) 
+; took 0.000368 secs. (367.92 microseconds) 
 
   !(assertEqualToResult 
     (If 
@@ -148,7 +156,7 @@ Script started on 2024-09-28 10:27:35+00:00 [TERM="xterm-256color" TTY="/dev/pts
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 94,177 inferences, 0.045 CPU in 0.045 seconds (100% CPU, 2102055 Lips)
+>% 94,174 inferences, 0.044 CPU in 0.044 seconds (100% CPU, 2145556 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/and_or.metta  0)
 <span class="ansi1"
@@ -183,7 +191,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-28 10:27:40+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-29 08:02:04+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

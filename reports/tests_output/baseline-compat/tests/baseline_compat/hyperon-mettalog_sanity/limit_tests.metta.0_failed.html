@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -30,7 +31,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-28 10:24:25+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-09-29 07:58:40+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -39,7 +40,14 @@ Script started on 2024-09-28 10:24:25+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi31"
+>
+Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:1532:
+Warning:    Singleton variables: [Metta,SExprParser]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:1540:
+Warning:    Singleton variables: [Metta]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -96,7 +104,7 @@ Script started on 2024-09-28 10:24:25+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                           (= 2  "Excessive result: (limit! 0 (sequential (1 2 3))))]")
 P;HTML|
-;                                           (= 2  "0.03user 0.01system 0:00.04elapsed 100%CPU (0avgtext+0avgdata 25132maxresident)k")
+;                                           (= 2  "0.03user 0.01system 0:00.04elapsed 97%CPU (0avgtext+0avgdata 25128maxresident)k")
 P;HTML|
 ;                                           (= 2  "0inputs+0outputs (0major+2845minor)pagefaults 0swaps")
 P;HTML|
@@ -114,7 +122,7 @@ Script started on 2024-09-28 10:24:25+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000153 secs. (153.34 microseconds) 
+; took 0.000166 secs. (165.72 microseconds) 
 
   !(assertEqualToResult 
     (limit! 0 
@@ -138,7 +146,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000266 secs. (266.03 microseconds) 
+; took 0.000224 secs. (224.37 microseconds) 
 
   !(assertEqualToResult 
     (limit! 2 
@@ -204,7 +212,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000343 secs. (342.81 microseconds) 
+; took 0.000317 secs. (316.79 microseconds) 
 
   !(assertEqualToResult 
     (get-state! &var) 
@@ -238,7 +246,7 @@ Deterministic: (State  0 $_3388)[
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000341 secs. (340.80 microseconds) 
+; took 0.000344 secs. (344.41 microseconds) 
 
   !(assertEqualToResult 
     (get-state! &var) 
@@ -266,7 +274,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.06</h3>
 ; 
 ; EVAL TEST
-; took 0.005 secs. (4.84 milliseconds) 
+; took 0.005 secs. (4.86 milliseconds) 
 
   !(assertEqualToResult 
     (limit! 
@@ -293,7 +301,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000319 secs. (319.07 microseconds) 
+; took 0.000271 secs. (270.97 microseconds) 
 
   !(assertEqualToResult 
     (get-state! &var) 
@@ -308,7 +316,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 281,603 inferences, 0.076 CPU in 0.076 seconds (100% CPU, 3729353 Lips)
+>% 281,588 inferences, 0.075 CPU in 0.075 seconds (100% CPU, 3732408 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/limit_tests.metta  0)
 <span class="ansi1"
@@ -343,7 +351,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-28 10:24:30+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-29 07:58:45+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

@@ -453,7 +453,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-28 10:21:04+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-09-29 07:55:05+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -462,7 +462,14 @@ Script started on 2024-09-28 10:21:04+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi31"
+>
+Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:1532:
+Warning:    Singleton variables: [Metta,SExprParser]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:1540:
+Warning:    Singleton variables: [Metta]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -571,7 +578,7 @@ Script started on 2024-09-28 10:21:04+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B5-TYPES-PRELIM.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000354 secs. (354.02 microseconds) 
+; took 0.000348 secs. (347.92 microseconds) 
 
   !(assertEqual 
     (Add S Z) S)
@@ -637,7 +644,7 @@ true]
 >          |     <--S </span>
 ; 
 ; EVAL TEST
-; took 0.007 secs. (6.67 milliseconds) 
+; took 0.007 secs. (6.69 milliseconds) 
 
   !(assertEqualToResult 
     (Add S Z) 
@@ -708,7 +715,7 @@ Deterministic: ((Error  (got  (S)) (expected  ((Error S BadType)))))
 >    9:1   |   |-<--(S Z) </span>
 ; 
 ; EVAL TEST
-; took 0.010 secs. (9.67 milliseconds) 
+; took 0.010 secs. (9.70 milliseconds) 
 
   !(assertEqual 
     (Add 
@@ -797,7 +804,7 @@ Deterministic: ()
 >   13:1   |   |-<--(S Z) </span>
 ; 
 ; EVAL TEST
-; took 0.017 secs. (17.47 milliseconds) 
+; took 0.017 secs. (17.40 milliseconds) 
 
   !(assertEqual 
     (Add Z 
@@ -846,7 +853,7 @@ Deterministic: ()
 >          |     <--Something </span>
 ; 
 ; EVAL TEST
-; took 0.008 secs. (7.75 milliseconds) 
+; took 0.007 secs. (6.74 milliseconds) 
 
   !(assertEqual 
     (Add Something Z) Something)
@@ -898,7 +905,7 @@ Deterministic: ()
 >          |     <--(Add Z Ten) </span>
 ; 
 ; EVAL TEST
-; took 0.007 secs. (6.79 milliseconds) 
+; took 0.007 secs. (6.90 milliseconds) 
 
   !(assertEqualToResult 
     (Add Z Ten) 
@@ -971,7 +978,7 @@ Deterministic: ()
 >    5:1   |   |-<--(Cons (S Z) (Cons Z Nil)) </span>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (2.71 milliseconds) 
+; took 0.003 secs. (2.64 milliseconds) 
 
   !(assertEqualToResult 
     (Cons 
@@ -1021,7 +1028,7 @@ Deterministic: ()
 >    3:1   |   |-<--(Cons S (Cons Z Nil)) </span>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.67 milliseconds) 
+; took 0.002 secs. (1.59 milliseconds) 
 
   !(assertEqualToResult 
     (Cons S 
@@ -1105,7 +1112,7 @@ Deterministic: ((Error  (got  ((Cons S (Cons Z Nil)))) (expected  ((Error (Cons 
 >    5:1   |   |-<--T </span>
 ; 
 ; EVAL TEST
-; took 0.010 secs. (10.37 milliseconds) 
+; took 0.010 secs. (10.22 milliseconds) 
 
   !(assertEqual 
     (eq 
@@ -1156,7 +1163,7 @@ Deterministic: ()
 >          |     <--(eq Z (S Z)) </span>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (4.27 milliseconds) 
+; took 0.004 secs. (4.20 milliseconds) 
 
   !(assertEqualToResult 
     (eq Z 
@@ -1201,7 +1208,7 @@ Deterministic: ()
 >          |     <--(eq Z S) </span>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.30 milliseconds) 
+; took 0.003 secs. (3.14 milliseconds) 
 
   !(assertEqualToResult 
     (eq Z S) 
@@ -1271,7 +1278,7 @@ Deterministic: ((Error  (got  ((eq Z S))) (expected  ((Error S BadType)))))
 >          |     <--T </span>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.22 milliseconds) 
+; took 0.003 secs. (3.18 milliseconds) 
 
   !(assertEqual 
     (of-same-type Color Shape) T)
@@ -1309,7 +1316,7 @@ Deterministic: ()
 >          |     <--T </span>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.29 milliseconds) 
+; took 0.003 secs. (3.19 milliseconds) 
 
   !(assertEqual 
     (of-same-type Green Red) T)
@@ -1349,7 +1356,7 @@ Deterministic: ()
 >          |     <--T </span>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.22 milliseconds) 
+; took 0.003 secs. (3.09 milliseconds) 
 
   !(assertEqualToResult 
     (of-same-type Green Color) 
@@ -1393,7 +1400,7 @@ Deterministic: ((Error  (got  (T)) (expected  ((Error Color BadType)))))
 >          |     <--T </span>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.31 milliseconds) 
+; took 0.003 secs. (3.16 milliseconds) 
 
   !(assertEqualToResult 
     (of-same-type Green Circle) 
@@ -1455,7 +1462,7 @@ Deterministic: ((Error  (got  (T)) (expected  ((Error Circle BadType)))))
 >          |     <--T </span>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.50 milliseconds) 
+; took 0.002 secs. (2.40 milliseconds) 
 
   !(assertEqual 
     (Green $who) T)
@@ -1487,7 +1494,7 @@ Deterministic: ()
 >    1:1   |   |-<--Sam </span>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.34 milliseconds) 
+; took 0.002 secs. (2.21 milliseconds) 
 
   !(assertEqual 
     (match &self 
@@ -1538,7 +1545,7 @@ Deterministic: ()
 >          |   |     <--T </span>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (4.46 milliseconds) 
+; took 0.004 secs. (4.38 milliseconds) 
 
   !(assertEqual 
     (match &self 
@@ -1658,7 +1665,7 @@ Deterministic: ()
 >    1:1   |   |-<--fail </span>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.39 milliseconds) 
+; took 0.002 secs. (2.27 milliseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -1781,7 +1788,7 @@ Deterministic: ()
 >   19:1   |   |-<--Z </span>
 ; 
 ; EVAL TEST
-; took 0.023 secs. (22.76 milliseconds) 
+; took 0.023 secs. (22.54 milliseconds) 
 
   !(assertEqual 
     (let 
@@ -1978,7 +1985,7 @@ Deterministic: ()
 >   40:1   |   |-<--T </span>
 ; 
 ; EVAL TEST
-; took 0.067 secs. (67.31 milliseconds) 
+; took 0.068 secs. (67.82 milliseconds) 
 
   !(assertEqual 
     (let* 
@@ -2070,7 +2077,7 @@ Deterministic: ()
 >    8:1   |   |-<--T </span>
 ; 
 ; EVAL TEST
-; took 0.018 secs. (17.71 milliseconds) 
+; took 0.017 secs. (17.28 milliseconds) 
 
   !(assertEqual 
     (eqa 
@@ -2134,7 +2141,7 @@ Deterministic: ()
 >    5:1   |   |-<--T </span>
 ; 
 ; EVAL TEST
-; took 0.010 secs. (10.27 milliseconds) 
+; took 0.010 secs. (10.21 milliseconds) 
 
   !(assertEqualToResult 
     (eqa Z 
@@ -2201,7 +2208,7 @@ Deterministic: ((Error  (got  (T)) (expected  ((eqa Z (Add Z Z))))))
 >    5:1   |   |-<--T </span>
 ; 
 ; EVAL TEST
-; took 0.010 secs. (10.22 milliseconds) 
+; took 0.010 secs. (10.04 milliseconds) 
 
   !(assertEqual 
     (eq Z 
@@ -2262,7 +2269,7 @@ Deterministic: ()
 >    7:1   |   |-<--T </span>
 ; 
 ; EVAL TEST
-; took 0.013 secs. (12.55 milliseconds) 
+; took 0.012 secs. (12.11 milliseconds) 
 
   !(assertEqual 
     (let $z 
@@ -2280,7 +2287,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 2,670,891 inferences, 0.493 CPU in 0.493 seconds (100% CPU, 5413560 Lips)
+>% 2,670,888 inferences, 0.488 CPU in 0.488 seconds (100% CPU, 5471129 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/b5_types_prelim.metta  0)
 <span class="ansi1"
@@ -2315,7 +2322,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-28 10:21:10+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-29 07:55:11+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
