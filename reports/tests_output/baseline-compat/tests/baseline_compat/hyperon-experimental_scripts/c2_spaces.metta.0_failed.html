@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -72,7 +71,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-04 01:09:30+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-04 01:14:08+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -81,12 +80,7 @@ Script started on 2024-10-04 01:09:30+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi1 ansi31"
->
-ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_repl.pl:4:
-ERROR:    No permission to redefine built-in predicate `notrace/1'
-ERROR:    Use :- redefine_system_predicate(+Head) if redefinition is intended
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -216,7 +210,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C2-SPACES.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000504 secs. (503.55 microseconds) 
+; took 0.000505 secs. (504.79 microseconds) 
 
   !(assertEqualToResult 
     (match &kb 
@@ -247,7 +241,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C2-SPACES.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000147 secs. (146.66 microseconds) 
+; took 0.000132 secs. (132.06 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -277,7 +271,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C2-SPACES.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000308 secs. (307.52 microseconds) 
+; took 0.000343 secs. (343.24 microseconds) 
 
   !(assertEqual 
     (match &kb 
@@ -316,7 +310,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C2-SPACES.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000579 secs. (578.57 microseconds) 
+; took 0.000653 secs. (653.07 microseconds) 
 
   !(assertEqualToResult 
     (match &kb 
@@ -420,7 +414,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C2-SPACES.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000414 secs. (414.13 microseconds) 
+; took 0.000514 secs. (514.33 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -440,7 +434,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 433,622 inferences, 0.126 CPU in 0.126 seconds (100% CPU, 3452115 Lips)
+>% 433,625 inferences, 0.129 CPU in 0.129 seconds (100% CPU, 3361594 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/c2_spaces.metta  0)
 <span class="ansi1"
@@ -475,7 +469,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-04 01:09:35+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-04 01:14:13+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

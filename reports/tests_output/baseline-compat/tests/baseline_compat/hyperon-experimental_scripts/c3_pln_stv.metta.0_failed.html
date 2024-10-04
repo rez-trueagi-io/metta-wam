@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -42,7 +41,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-04 01:09:36+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-04 01:14:14+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -51,12 +50,7 @@ Script started on 2024-10-04 01:09:36+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi1 ansi31"
->
-ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_repl.pl:4:
-ERROR:    No permission to redefine built-in predicate `notrace/1'
-ERROR:    Use :- redefine_system_predicate(+Head) if redefinition is intended
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -237,7 +231,7 @@ ERROR:    Use :- redefine_system_predicate(+Head) if redefinition is intended
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C3-PLN-STV.01</h3>
 ; 
 ; EVAL TEST
-; took 0.009 secs. (9.34 milliseconds) 
+; took 0.009 secs. (9.40 milliseconds) 
 
   !(assertEqual 
     (TV (And (PA) (PB))) 
@@ -262,7 +256,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C3-PLN-STV.02</h3>
 ; 
 ; EVAL TEST
-; took 0.005 secs. (5.09 milliseconds) 
+; took 0.005 secs. (5.05 milliseconds) 
 
   !(assertEqual 
     (TV (FA)) 
@@ -316,7 +310,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C3-PLN-STV.03</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.43 milliseconds) 
+; took 0.001 secs. (1.46 milliseconds) 
 
   !(assertEqual 
     (TV (croaks Fritz)) 
@@ -341,7 +335,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C3-PLN-STV.04</h3>
 ; 
 ; EVAL TEST
-; took 0.015 secs. (14.90 milliseconds) 
+; took 0.015 secs. (14.83 milliseconds) 
 
   !(assertEqual 
     (TV (frog Fritz)) 
@@ -366,7 +360,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C3-PLN-STV.05</h3>
 ; 
 ; EVAL TEST
-; took 0.032 secs. (31.92 milliseconds) 
+; took 0.032 secs. (31.61 milliseconds) 
 
   !(assertEqual 
     (TV (green Fritz)) 
@@ -381,7 +375,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 619,183 inferences, 0.147 CPU in 0.147 seconds (100% CPU, 4211834 Lips)
+>% 619,186 inferences, 0.148 CPU in 0.148 seconds (100% CPU, 4190001 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/c3_pln_stv.metta  0)
 <span class="ansi1"
@@ -416,7 +410,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-04 01:09:41+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-04 01:14:20+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

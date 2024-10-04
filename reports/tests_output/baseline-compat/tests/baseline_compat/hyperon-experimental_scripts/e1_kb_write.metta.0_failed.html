@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -34,7 +33,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-04 01:10:17+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-04 01:14:54+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -43,12 +42,7 @@ Script started on 2024-10-04 01:10:17+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi1 ansi31"
->
-ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_repl.pl:4:
-ERROR:    No permission to redefine built-in predicate `notrace/1'
-ERROR:    Use :- redefine_system_predicate(+Head) if redefinition is intended
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -173,7 +167,7 @@ Deterministic: ()
 >  (Green Sam)
 </span>; 
 ; EVAL TEST
-; took 0.005 secs. (4.64 milliseconds) 
+; took 0.005 secs. (4.83 milliseconds) 
 
   !(assertEqualToResult 
     (ift 
@@ -203,7 +197,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E1-KB-WRITE.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000177 secs. (176.80 microseconds) 
+; took 0.000228 secs. (228.40 microseconds) 
 
   !(assertEqualToResult 
     (match &kb 
@@ -219,7 +213,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 166,354 inferences, 0.063 CPU in 0.063 seconds (100% CPU, 2655594 Lips)
+>% 166,357 inferences, 0.064 CPU in 0.064 seconds (100% CPU, 2609150 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/e1_kb_write.metta  0)
 <span class="ansi1"
@@ -254,7 +248,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-04 01:10:22+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-04 01:14:59+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

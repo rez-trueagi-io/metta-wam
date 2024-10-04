@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -42,7 +41,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-04 01:09:57+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-04 01:14:34+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -51,12 +50,7 @@ Script started on 2024-10-04 01:09:57+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi1 ansi31"
->
-ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_repl.pl:4:
-ERROR:    No permission to redefine built-in predicate `notrace/1'
-ERROR:    Use :- redefine_system_predicate(+Head) if redefinition is intended
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -165,7 +159,7 @@ ERROR:    Use :- redefine_system_predicate(+Head) if redefinition is intended
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D3-DEPTYPES.01</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.28 milliseconds) 
+; took 0.001 secs. (1.33 milliseconds) 
 
   !(assertEqual 
     (get-type (Cons 0 (Cons 1 Nil))) 
@@ -204,7 +198,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D3-DEPTYPES.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000646 secs. (646.02 microseconds) 
+; took 0.000664 secs. (663.94 microseconds) 
 
   !(assertEqual 
     (get-type (drop (Cons 1 Nil))) 
@@ -230,7 +224,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D3-DEPTYPES.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000878 secs. (878.41 microseconds) 
+; took 0.000910 secs. (909.96 microseconds) 
 
   !(assertEqual 
     (drop (Cons 2 (Cons 1 Nil))) 
@@ -255,7 +249,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D3-DEPTYPES.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000221 secs. (221.18 microseconds) 
+; took 0.000226 secs. (225.52 microseconds) 
 
   !(assertEqualToResult 
     (get-type (drop Nil)) ())
@@ -298,7 +292,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D3-DEPTYPES.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000955 secs. (955.16 microseconds) 
+; took 0.000982 secs. (982.01 microseconds) 
 
   !(assertEqual 
     (get-type (ConsN "1" (ConsN "2" NilN))) 
@@ -333,7 +327,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D3-DEPTYPES.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000850 secs. (849.97 microseconds) 
+; took 0.000880 secs. (880.38 microseconds) 
 
   !(assertEqual 
     (get-type (dropN (ConsN "1" NilN))) 
@@ -366,7 +360,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D3-DEPTYPES.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000265 secs. (264.67 microseconds) 
+; took 0.000266 secs. (265.76 microseconds) 
 
   !(assertEqualToResult 
     (dropN NilN) 
@@ -381,7 +375,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 334,004 inferences, 0.096 CPU in 0.096 seconds (100% CPU, 3486180 Lips)
+>% 334,003 inferences, 0.099 CPU in 0.099 seconds (100% CPU, 3381911 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/d3_deptypes.metta  0)
 <span class="ansi1"
@@ -416,7 +410,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-04 01:10:02+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-04 01:14:39+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

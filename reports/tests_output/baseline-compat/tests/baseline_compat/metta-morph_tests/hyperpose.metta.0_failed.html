@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -36,7 +35,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-04 01:16:16+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-04 01:20:44+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -45,12 +44,7 @@ Script started on 2024-10-04 01:16:16+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi1 ansi31"
->
-ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_repl.pl:4:
-ERROR:    No permission to redefine built-in predicate `notrace/1'
-ERROR:    Use :- redefine_system_predicate(+Head) if redefinition is intended
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -166,7 +160,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.HYPERPOSE.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000575 secs. (574.52 microseconds) 
+; took 0.000512 secs. (511.53 microseconds) 
 
   !(assertEqual 
     (hyperpose (1 (If (== 1 2) 1))) 
@@ -191,7 +185,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.HYPERPOSE.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000562 secs. (561.82 microseconds) 
+; took 0.000491 secs. (491.31 microseconds) 
 
   !(assertEqual 
     (hyperpose ((If (== 1 2) 1) 1)) 
@@ -216,7 +210,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.HYPERPOSE.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000269 secs. (268.86 microseconds) 
+; took 0.000245 secs. (245.15 microseconds) 
 
   !(assertEqual 
     (hyperpose (1 2 3)) 
@@ -241,7 +235,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.HYPERPOSE.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000493 secs. (493.20 microseconds) 
+; took 0.000512 secs. (511.58 microseconds) 
 
   !(assertEqual 
     (hyperpose ((If (== 1 2) 1) 2 3)) 
@@ -266,7 +260,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.HYPERPOSE.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000514 secs. (514.36 microseconds) 
+; took 0.000529 secs. (528.67 microseconds) 
 
   !(assertEqual 
     (hyperpose (1 (If (== 1 2) 1) 3)) 
@@ -291,7 +285,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.HYPERPOSE.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000516 secs. (516.30 microseconds) 
+; took 0.000488 secs. (488.24 microseconds) 
 
   !(assertEqual 
     (hyperpose (1 2 (If (== 1 2) 1))) 
@@ -316,7 +310,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.HYPERPOSE.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000739 secs. (739.21 microseconds) 
+; took 0.000745 secs. (744.71 microseconds) 
 
   !(assertEqual 
     (hyperpose (1 (If (== 1 2) 1) (If (== 1 2) 1))) 
@@ -341,7 +335,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.HYPERPOSE.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000257 secs. (256.66 microseconds) 
+; took 0.000260 secs. (259.82 microseconds) 
 
   !(assertEqual 
     (hyperpose (1 2 3 4)) 
@@ -366,7 +360,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.HYPERPOSE.10</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.09 milliseconds) 
+; took 0.001 secs. (1.11 milliseconds) 
 
   !(assertEqual 
     (hyperpose ((1 2) (3 4))) 
@@ -381,7 +375,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 325,962 inferences, 0.080 CPU in 0.080 seconds (100% CPU, 4072212 Lips)
+>% 325,965 inferences, 0.081 CPU in 0.081 seconds (100% CPU, 4021991 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/hyperpose.metta  0)
 <span class="ansi1"
@@ -416,7 +410,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-04 01:16:21+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-04 01:20:49+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

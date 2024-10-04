@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -70,7 +69,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-04 01:09:02+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-04 01:13:41+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -79,12 +78,7 @@ Script started on 2024-10-04 01:09:02+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi1 ansi31"
->
-ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_repl.pl:4:
-ERROR:    No permission to redefine built-in predicate `notrace/1'
-ERROR:    Use :- redefine_system_predicate(+Head) if redefinition is intended
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -184,7 +178,7 @@ ERROR:    Use :- redefine_system_predicate(+Head) if redefinition is intended
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B3-DIRECT.01</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.01 milliseconds) 
+; took 0.001 secs. (1.12 milliseconds) 
 
   !(assertEqual 
     (green Fritz) T)
@@ -302,7 +296,7 @@ true]
 >          |     <--Fritz </span>
 ; 
 ; EVAL TEST
-; took 0.022 secs. (22.32 milliseconds) 
+; took 0.023 secs. (23.38 milliseconds) 
 
   !(assertEqual 
     (ift 
@@ -343,7 +337,7 @@ Deterministic: ()
 >    1:1   |   |-<--eat_flies </span>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.35 milliseconds) 
+; took 0.002 secs. (2.36 milliseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -362,7 +356,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 351,378 inferences, 0.092 CPU in 0.092 seconds (100% CPU, 3832119 Lips)
+>% 351,381 inferences, 0.099 CPU in 0.099 seconds (100% CPU, 3546889 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/b3_direct.metta  0)
 <span class="ansi1"
@@ -397,7 +391,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-04 01:09:07+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-04 01:13:46+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -70,7 +69,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-04 01:17:37+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-04 01:22:03+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -79,12 +78,7 @@ Script started on 2024-10-04 01:17:37+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi1 ansi31"
->
-ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_repl.pl:4:
-ERROR:    No permission to redefine built-in predicate `notrace/1'
-ERROR:    Use :- redefine_system_predicate(+Head) if redefinition is intended
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -413,7 +407,7 @@ ERROR:    Use :- redefine_system_predicate(+Head) if redefinition is intended
 >;; METTA-MORPH-TESTS.NALIFIER.01</h3>
 ; 
 ; EVAL TEST
-; took 1.704 secs. (1704.11 milliseconds) 
+; took 1.677 secs. (1677.35 milliseconds) 
 
   !(assertEqualToResult 
     (let 
@@ -431,7 +425,7 @@ Deterministic: ()
 ()]
 ;;;  !(repl!)
 <span class="ansi32"
->% 9,762,426 inferences, 1.848 CPU in 1.848 seconds (100% CPU, 5281985 Lips)
+>% 9,762,429 inferences, 1.805 CPU in 1.805 seconds (100% CPU, 5408716 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/nalifier.metta  0)
 <span class="ansi1"
@@ -466,7 +460,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-04 01:17:44+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-04 01:22:10+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
