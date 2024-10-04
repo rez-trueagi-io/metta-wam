@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -50,7 +51,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-04 00:57:06+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-04 01:11:59+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -59,7 +60,12 @@ Script started on 2024-10-04 00:57:06+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi1 ansi31"
+>
+ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_repl.pl:4:
+ERROR:    No permission to redefine built-in predicate `notrace/1'
+ERROR:    Use :- redefine_system_predicate(+Head) if redefinition is intended
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -354,7 +360,7 @@ Script started on 2024-10-04 00:57:06+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-METTALOG-SANITY.FIRST-ANSWER.01</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.51 milliseconds) 
+; took 0.002 secs. (1.53 milliseconds) 
 
   !(assertEqualToResult 
     (limit 1 
@@ -398,7 +404,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.FIRST-ANSWER.02</h3>
 ; 
 ; EVAL TEST
-; took 0.024 secs. (23.80 milliseconds) 
+; took 0.024 secs. (24.19 milliseconds) 
 
   !(assertEqualToResult 
     (limit 6 
@@ -455,7 +461,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 511,654 inferences, 0.123 CPU in 0.123 seconds (100% CPU, 4160195 Lips)
+>% 511,655 inferences, 0.123 CPU in 0.123 seconds (100% CPU, 4151870 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/first_answer.metta  0)
 <span class="ansi1"
@@ -490,7 +496,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-04 00:57:11+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-04 01:12:04+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -68,7 +69,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-04 01:04:26+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-04 01:19:27+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -77,7 +78,12 @@ Script started on 2024-10-04 01:04:26+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi1 ansi31"
+>
+ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_repl.pl:4:
+ERROR:    No permission to redefine built-in predicate `notrace/1'
+ERROR:    Use :- redefine_system_predicate(+Head) if redefinition is intended
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -179,7 +185,7 @@ Script started on 2024-10-04 01:04:26+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; QUICK.D4-TYPE-PROP.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000255 secs. (255.12 microseconds) 
+; took 0.000230 secs. (229.93 microseconds) 
 
   !(assertEqual 
     (get-type (Mortal Plato)) Type)
@@ -227,7 +233,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.02</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.12 milliseconds) 
+; took 0.000997 secs. (996.90 microseconds) 
 
   !(assertEqual 
     (get-type (HumansAreMortal SocratesIsHuman)) 
@@ -252,7 +258,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000293 secs. (293.26 microseconds) 
+; took 0.000238 secs. (237.65 microseconds) 
 
   !(assertEqualToResult 
     (get-type (HumansAreMortal (Human Socrates))) ())
@@ -306,7 +312,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.04</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.33 milliseconds) 
+; took 0.002 secs. (2.22 milliseconds) 
 
   !(assertEqualToResult 
     ("sameTypes" 
@@ -338,7 +344,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000401 secs. (400.86 microseconds) 
+; took 0.000310 secs. (310.38 microseconds) 
 
   !(assertEqual 
     (get-type (= SocratesIsMortal (HumansAreMortal SocratesIsHuman))) Type)
@@ -373,7 +379,7 @@ Deterministic: ("sameTypes" Type Type)
 >;; QUICK.D4-TYPE-PROP.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000364 secs. (364.46 microseconds) 
+; took 0.000329 secs. (329.09 microseconds) 
 
   !(assertEqual 
     (get-type (= (Mortal Socrates) (Mortal Plato))) Type)
@@ -409,7 +415,7 @@ Deterministic: ("!sameTypes" (Mortal Socrates) (Mortal Plato))
 >;; QUICK.D4-TYPE-PROP.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000361 secs. (360.89 microseconds) 
+; took 0.000313 secs. (313.09 microseconds) 
 
   !(assertEqualToResult 
     (get-type (= SocratesIsMortal (HumansAreMortal PlatoIsHuman))) ())
@@ -443,7 +449,7 @@ Deterministic: ("!sameTypes" (Human Socrates) !(get-type PlatoIsHuman))
 >;; QUICK.D4-TYPE-PROP.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000253 secs. (253.11 microseconds) 
+; took 0.000204 secs. (204.08 microseconds) 
 
   !(assertEqualToResult 
     (get-type (= SocratesIsHuman PlatoIsHuman)) ())
@@ -476,7 +482,7 @@ Deterministic: ("!sameTypes" (Human Socrates) (Mortal Socrates))
 >;; QUICK.D4-TYPE-PROP.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000260 secs. (259.74 microseconds) 
+; took 0.000207 secs. (207.10 microseconds) 
 
   !(assertEqualToResult 
     (get-type (= SocratesIsHuman SocratesIsMortal)) ())
@@ -519,7 +525,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000518 secs. (517.60 microseconds) 
+; took 0.000455 secs. (455.44 microseconds) 
 
   !(assertEqual 
     (= SocratesIsMortal 
@@ -545,7 +551,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000486 secs. (485.75 microseconds) 
+; took 0.000403 secs. (402.80 microseconds) 
 
   !(assertEqual 
     (= 
@@ -577,7 +583,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000709 secs. (709.45 microseconds) 
+; took 0.000722 secs. (721.65 microseconds) 
 
   !(assertEqual 
     (= 
@@ -603,7 +609,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.13</h3>
 ; 
 ; EVAL TEST
-; took 0.000713 secs. (712.90 microseconds) 
+; took 0.000689 secs. (689.01 microseconds) 
 
   !(assertEqualToResult 
     (= 
@@ -634,7 +640,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.14</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.39 milliseconds) 
+; took 0.001 secs. (1.23 milliseconds) 
 
   !(assertEqual 
     (= 
@@ -661,7 +667,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.15</h3>
 ; 
 ; EVAL TEST
-; took 0.000549 secs. (548.80 microseconds) 
+; took 0.000599 secs. (599.48 microseconds) 
 
   !(assertEqualToResult 
     (= 
@@ -688,7 +694,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.16</h3>
 ; 
 ; EVAL TEST
-; took 0.000419 secs. (419.27 microseconds) 
+; took 0.000400 secs. (399.58 microseconds) 
 
   !(assertEqualToResult 
     (Mortal Plato) 
@@ -714,7 +720,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.17</h3>
 ; 
 ; EVAL TEST
-; took 0.000779 secs. (779.31 microseconds) 
+; took 0.000795 secs. (795.38 microseconds) 
 
   !(assertEqual 
     (= 
@@ -751,7 +757,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.18</h3>
 ; 
 ; EVAL TEST
-; took 0.000413 secs. (413.13 microseconds) 
+; took 0.000381 secs. (381.39 microseconds) 
 
   !(assertEqual 
     (Mortal Plato) T)
@@ -783,7 +789,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.19</h3>
 ; 
 ; EVAL TEST
-; took 0.000675 secs. (674.73 microseconds) 
+; took 0.000619 secs. (619.23 microseconds) 
 
   !(assertEqualToResult 
     (ift 
@@ -799,7 +805,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 744,510 inferences, 0.178 CPU in 0.178 seconds (100% CPU, 4181667 Lips)
+>% 744,509 inferences, 0.171 CPU in 0.171 seconds (100% CPU, 4357862 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/quick/d4_type_prop.metta  0)
 <span class="ansi1"
@@ -834,7 +840,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-04 01:04:31+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-04 01:19:32+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

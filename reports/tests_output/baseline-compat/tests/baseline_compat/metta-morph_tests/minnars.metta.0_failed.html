@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -71,7 +72,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-04 01:02:22+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-04 01:17:22+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -80,7 +81,12 @@ Script started on 2024-10-04 01:02:22+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi1 ansi31"
+>
+ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_repl.pl:4:
+ERROR:    No permission to redefine built-in predicate `notrace/1'
+ERROR:    Use :- redefine_system_predicate(+Head) if redefinition is intended
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -468,7 +474,7 @@ Script started on 2024-10-04 01:02:22+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; METTA-MORPH-TESTS.MINNARS.01</h3>
 ; 
 ; EVAL TEST
-; took 1.400 secs. (1399.73 milliseconds) 
+; took 1.362 secs. (1361.79 milliseconds) 
 
   !(assertEqualToResult 
     (Question 
@@ -499,7 +505,7 @@ Script started on 2024-10-04 01:02:22+00:00 [TERM="xterm-256color" TTY="/dev/pts
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 8,272,786 inferences, 1.527 CPU in 1.527 seconds (100% CPU, 5416296 Lips)
+>% 8,272,783 inferences, 1.486 CPU in 1.486 seconds (100% CPU, 5566089 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/minnars.metta  0)
 <span class="ansi1"
@@ -534,7 +540,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-04 01:02:29+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-04 01:17:29+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

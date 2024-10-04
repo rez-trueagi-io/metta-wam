@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -23,7 +24,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-04 00:52:01+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-04 01:06:44+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -32,7 +33,12 @@ Script started on 2024-10-04 00:52:01+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi1 ansi31"
+>
+ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_repl.pl:4:
+ERROR:    No permission to redefine built-in predicate `notrace/1'
+ERROR:    Use :- redefine_system_predicate(+Head) if redefinition is intended
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -103,17 +109,17 @@ Script started on 2024-10-04 00:52:01+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 
 Deterministic: ()
-(); Execution took 0.002 secs. (1.71 milliseconds) 
+(); Execution took 0.002 secs. (1.66 milliseconds) 
 
 ]
 <span class="ansi38-013099040"
 >  !(import! &hald5000 hald_spo_5000)
 
 </span>
-; Done translating 5005 forms: asserted_metta_pred(hald_spo_5000_1728003126_0653172,'/home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/issues/metta-wam-issue-116/hald_spo_5000.metta').[
+; Done translating 5005 forms: asserted_metta_pred('_hald_spo_5000_1728004009_258669','/home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/issues/metta-wam-issue-116/hald_spo_5000.metta').[
 
 Deterministic: ()
-(); Execution took 0.484 secs. (483.99 milliseconds) 
+(); Execution took 0.491 secs. (491.28 milliseconds) 
 
 ]
 <span class="ansi38-013099040"
@@ -131,7 +137,7 @@ Deterministic: ()
 >;; METTA-WAM-ISSUE-116.TEST-SPO-5000.01</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.11 milliseconds) 
+; took 0.002 secs. (2.09 milliseconds) 
 
   !(assertEqualToResult 
     (match &hald5000 
@@ -152,11 +158,11 @@ Deterministic: ()
         (Doxorubicin stratify Liposarcoma))))
 </span>
 Deterministic: ()
-(); Execution took 0.005 secs. (4.68 milliseconds) 
+(); Execution took 0.005 secs. (4.71 milliseconds) 
 
 ]
 <span class="ansi32"
->% 5,419,899 inferences, 0.532 CPU in 0.532 seconds (100% CPU, 10181450 Lips)
+>% 5,419,900 inferences, 0.539 CPU in 0.539 seconds (100% CPU, 10064607 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/issues/metta-wam-issue-116/test_spo_5000.metta  0)
 <span class="ansi1"
@@ -191,7 +197,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-04 00:52:06+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-04 01:06:49+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
