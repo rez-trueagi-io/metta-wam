@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -33,7 +34,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-05 01:44:39+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-05 04:43:59+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -42,7 +43,11 @@ Script started on 2024-10-05 01:44:39+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi1 ansi31"
+>
+ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:612:
+ERROR:    Full stop in clause-body?  Cannot redefine ,/2
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -177,7 +182,7 @@ Deterministic: ()
 > 2
 </span>; 
 ; EVAL TEST
-; took 0.001 secs. (1.13 milliseconds) 
+; took 0.001 secs. (1.11 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &concepts 2) 
@@ -203,7 +208,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-SUPERPOSED-SPACES.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000204 secs. (204.45 microseconds) 
+; took 0.000194 secs. (193.60 microseconds) 
 
   !(assertEqualToResult 
     (match &attentional_focus $1 $1) 
@@ -228,7 +233,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-SUPERPOSED-SPACES.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000182 secs. (181.80 microseconds) 
+; took 0.000186 secs. (185.52 microseconds) 
 
   !(assertEqualToResult 
     (match &concepts $1 $1) 
@@ -255,7 +260,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-SUPERPOSED-SPACES.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000264 secs. (263.87 microseconds) 
+; took 0.000313 secs. (312.85 microseconds) 
 
   !(assertEqualToResult 
     (match 
@@ -271,7 +276,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 205,867 inferences, 0.069 CPU in 0.069 seconds (100% CPU, 2974548 Lips)
+>% 205,864 inferences, 0.067 CPU in 0.067 seconds (100% CPU, 3056363 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/match_superposed_spaces.metta  0)
 <span class="ansi1"
@@ -306,7 +311,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-05 01:44:45+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-05 04:44:04+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

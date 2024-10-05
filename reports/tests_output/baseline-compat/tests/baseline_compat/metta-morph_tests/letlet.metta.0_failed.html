@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165009 { color: #FFA509; }
@@ -23,7 +24,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-05 01:44:03+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-05 04:43:26+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -32,7 +33,11 @@ Script started on 2024-10-05 01:44:03+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi1 ansi31"
+>
+ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:612:
+ERROR:    Full stop in clause-body?  Cannot redefine ,/2
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -112,7 +117,7 @@ Script started on 2024-10-05 01:44:03+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; METTA-MORPH-TESTS.LETLET.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000860 secs. (859.92 microseconds) 
+; took 0.000765 secs. (764.60 microseconds) 
 
   !(assertEqualToResult 
     (let $T 
@@ -131,7 +136,7 @@ Script started on 2024-10-05 01:44:03+00:00 [TERM="xterm-256color" TTY="/dev/pts
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 80,486 inferences, 0.039 CPU in 0.039 seconds (100% CPU, 2038044 Lips)
+>% 80,487 inferences, 0.039 CPU in 0.039 seconds (100% CPU, 2044743 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/letlet.metta  0)
 <span class="ansi1"
@@ -166,7 +171,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-05 01:44:08+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-05 04:43:31+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

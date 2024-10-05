@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -23,7 +24,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-05 01:38:10+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-05 04:37:53+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -32,7 +33,11 @@ Script started on 2024-10-05 01:38:10+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi1 ansi31"
+>
+ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:612:
+ERROR:    Full stop in clause-body?  Cannot redefine ,/2
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -107,7 +112,7 @@ Script started on 2024-10-05 01:38:10+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-METTALOG-SANITY.01-LANG-INC.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000134 secs. (134.00 microseconds) 
+; took 0.000149 secs. (148.88 microseconds) 
 
   !(assertEqual 
     (maybe-inc Nothing) Nothing)
@@ -146,7 +151,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 113,544 inferences, 0.046 CPU in 0.046 seconds (100% CPU, 2459759 Lips)
+>% 113,541 inferences, 0.046 CPU in 0.046 seconds (100% CPU, 2494541 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/01_lang_inc.metta  0)
 <span class="ansi1"
@@ -181,7 +186,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-05 01:38:15+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-05 04:37:58+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

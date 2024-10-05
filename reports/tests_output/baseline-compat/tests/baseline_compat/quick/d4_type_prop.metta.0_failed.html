@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -68,7 +69,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-05 01:47:07+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-05 04:46:15+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -77,7 +78,11 @@ Script started on 2024-10-05 01:47:07+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi1 ansi31"
+>
+ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:612:
+ERROR:    Full stop in clause-body?  Cannot redefine ,/2
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -179,7 +184,7 @@ Script started on 2024-10-05 01:47:07+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; QUICK.D4-TYPE-PROP.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000246 secs. (246.48 microseconds) 
+; took 0.000251 secs. (251.44 microseconds) 
 
   !(assertEqual 
     (get-type (Mortal Plato)) Type)
@@ -252,7 +257,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000241 secs. (241.05 microseconds) 
+; took 0.000255 secs. (255.23 microseconds) 
 
   !(assertEqualToResult 
     (get-type (HumansAreMortal (Human Socrates))) ())
@@ -306,7 +311,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.04</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.17 milliseconds) 
+; took 0.002 secs. (2.22 milliseconds) 
 
   !(assertEqualToResult 
     ("sameTypes" 
@@ -338,7 +343,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000291 secs. (290.52 microseconds) 
+; took 0.000298 secs. (297.51 microseconds) 
 
   !(assertEqual 
     (get-type (= SocratesIsMortal (HumansAreMortal SocratesIsHuman))) Type)
@@ -373,7 +378,7 @@ Deterministic: ("sameTypes" Type Type)
 >;; QUICK.D4-TYPE-PROP.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000376 secs. (376.24 microseconds) 
+; took 0.000356 secs. (356.18 microseconds) 
 
   !(assertEqual 
     (get-type (= (Mortal Socrates) (Mortal Plato))) Type)
@@ -409,7 +414,7 @@ Deterministic: ("!sameTypes" (Mortal Socrates) (Mortal Plato))
 >;; QUICK.D4-TYPE-PROP.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000314 secs. (313.86 microseconds) 
+; took 0.000295 secs. (294.88 microseconds) 
 
   !(assertEqualToResult 
     (get-type (= SocratesIsMortal (HumansAreMortal PlatoIsHuman))) ())
@@ -443,7 +448,7 @@ Deterministic: ("!sameTypes" (Human Socrates) !(get-type PlatoIsHuman))
 >;; QUICK.D4-TYPE-PROP.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000239 secs. (238.91 microseconds) 
+; took 0.000210 secs. (210.03 microseconds) 
 
   !(assertEqualToResult 
     (get-type (= SocratesIsHuman PlatoIsHuman)) ())
@@ -476,7 +481,7 @@ Deterministic: ("!sameTypes" (Human Socrates) (Mortal Socrates))
 >;; QUICK.D4-TYPE-PROP.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000230 secs. (230.42 microseconds) 
+; took 0.000208 secs. (207.64 microseconds) 
 
   !(assertEqualToResult 
     (get-type (= SocratesIsHuman SocratesIsMortal)) ())
@@ -519,7 +524,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000518 secs. (518.14 microseconds) 
+; took 0.000443 secs. (443.04 microseconds) 
 
   !(assertEqual 
     (= SocratesIsMortal 
@@ -545,7 +550,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000468 secs. (467.99 microseconds) 
+; took 0.000432 secs. (431.62 microseconds) 
 
   !(assertEqual 
     (= 
@@ -577,7 +582,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000699 secs. (699.43 microseconds) 
+; took 0.000704 secs. (704.00 microseconds) 
 
   !(assertEqual 
     (= 
@@ -603,7 +608,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.13</h3>
 ; 
 ; EVAL TEST
-; took 0.000677 secs. (677.25 microseconds) 
+; took 0.000671 secs. (671.42 microseconds) 
 
   !(assertEqualToResult 
     (= 
@@ -634,7 +639,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.14</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.24 milliseconds) 
+; took 0.001 secs. (1.20 milliseconds) 
 
   !(assertEqual 
     (= 
@@ -661,7 +666,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.15</h3>
 ; 
 ; EVAL TEST
-; took 0.000582 secs. (582.05 microseconds) 
+; took 0.000574 secs. (573.59 microseconds) 
 
   !(assertEqualToResult 
     (= 
@@ -688,7 +693,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.16</h3>
 ; 
 ; EVAL TEST
-; took 0.000398 secs. (398.10 microseconds) 
+; took 0.000378 secs. (378.27 microseconds) 
 
   !(assertEqualToResult 
     (Mortal Plato) 
@@ -714,7 +719,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.17</h3>
 ; 
 ; EVAL TEST
-; took 0.000764 secs. (763.86 microseconds) 
+; took 0.000773 secs. (772.71 microseconds) 
 
   !(assertEqual 
     (= 
@@ -751,7 +756,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.18</h3>
 ; 
 ; EVAL TEST
-; took 0.000413 secs. (412.66 microseconds) 
+; took 0.000365 secs. (365.41 microseconds) 
 
   !(assertEqual 
     (Mortal Plato) T)
@@ -783,7 +788,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.19</h3>
 ; 
 ; EVAL TEST
-; took 0.000619 secs. (619.09 microseconds) 
+; took 0.000631 secs. (630.76 microseconds) 
 
   !(assertEqualToResult 
     (ift 
@@ -799,7 +804,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 750,947 inferences, 0.176 CPU in 0.176 seconds (100% CPU, 4264970 Lips)
+>% 750,944 inferences, 0.171 CPU in 0.171 seconds (100% CPU, 4386022 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/quick/d4_type_prop.metta  0)
 <span class="ansi1"
@@ -834,7 +839,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-05 01:47:12+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-05 04:46:20+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
