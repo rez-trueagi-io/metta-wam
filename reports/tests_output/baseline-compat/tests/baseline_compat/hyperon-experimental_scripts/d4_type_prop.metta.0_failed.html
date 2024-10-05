@@ -69,7 +69,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-05 04:36:52+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-05 04:41:11+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -184,7 +184,7 @@ ERROR:    Full stop in clause-body?  Cannot redefine ,/2
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D4-TYPE-PROP.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000236 secs. (236.16 microseconds) 
+; took 0.000283 secs. (283.10 microseconds) 
 
   !(assertEqual 
     (get-type (Mortal Plato)) Type)
@@ -232,7 +232,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D4-TYPE-PROP.02</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.09 milliseconds) 
+; took 0.001 secs. (1.05 milliseconds) 
 
   !(assertEqual 
     (get-type (HumansAreMortal SocratesIsHuman)) 
@@ -257,7 +257,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D4-TYPE-PROP.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000282 secs. (281.55 microseconds) 
+; took 0.000267 secs. (266.72 microseconds) 
 
   !(assertEqualToResult 
     (get-type (HumansAreMortal (Human Socrates))) ())
@@ -311,7 +311,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D4-TYPE-PROP.04</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.32 milliseconds) 
+; took 0.002 secs. (2.30 milliseconds) 
 
   !(assertEqualToResult 
     ("sameTypes" 
@@ -343,7 +343,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D4-TYPE-PROP.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000351 secs. (351.35 microseconds) 
+; took 0.000360 secs. (360.18 microseconds) 
 
   !(assertEqual 
     (get-type (= SocratesIsMortal (HumansAreMortal SocratesIsHuman))) Type)
@@ -378,7 +378,7 @@ Deterministic: ("sameTypes" Type Type)
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D4-TYPE-PROP.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000424 secs. (423.85 microseconds) 
+; took 0.000431 secs. (431.05 microseconds) 
 
   !(assertEqual 
     (get-type (= (Mortal Socrates) (Mortal Plato))) Type)
@@ -414,7 +414,7 @@ Deterministic: ("!sameTypes" (Mortal Socrates) (Mortal Plato))
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D4-TYPE-PROP.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000350 secs. (350.47 microseconds) 
+; took 0.000338 secs. (337.69 microseconds) 
 
   !(assertEqualToResult 
     (get-type (= SocratesIsMortal (HumansAreMortal PlatoIsHuman))) ())
@@ -448,7 +448,7 @@ Deterministic: ("!sameTypes" (Human Socrates) (Human Plato))
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D4-TYPE-PROP.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000235 secs. (234.72 microseconds) 
+; took 0.000251 secs. (250.65 microseconds) 
 
   !(assertEqualToResult 
     (get-type (= SocratesIsHuman PlatoIsHuman)) ())
@@ -481,7 +481,7 @@ Deterministic: ("!sameTypes" (Human Socrates) (Mortal Socrates))
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D4-TYPE-PROP.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000261 secs. (260.52 microseconds) 
+; took 0.000248 secs. (247.96 microseconds) 
 
   !(assertEqualToResult 
     (get-type (= SocratesIsHuman SocratesIsMortal)) ())
@@ -524,7 +524,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D4-TYPE-PROP.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000544 secs. (543.62 microseconds) 
+; took 0.000524 secs. (523.59 microseconds) 
 
   !(assertEqual 
     (= SocratesIsMortal 
@@ -550,7 +550,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D4-TYPE-PROP.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000487 secs. (486.77 microseconds) 
+; took 0.000386 secs. (385.61 microseconds) 
 
   !(assertEqual 
     (= 
@@ -582,7 +582,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D4-TYPE-PROP.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000792 secs. (792.46 microseconds) 
+; took 0.000692 secs. (692.34 microseconds) 
 
   !(assertEqual 
     (= 
@@ -608,7 +608,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D4-TYPE-PROP.13</h3>
 ; 
 ; EVAL TEST
-; took 0.000750 secs. (750.21 microseconds) 
+; took 0.000742 secs. (741.76 microseconds) 
 
   !(assertEqualToResult 
     (= 
@@ -639,7 +639,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D4-TYPE-PROP.14</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.31 milliseconds) 
+; took 0.001 secs. (1.35 milliseconds) 
 
   !(assertEqual 
     (= 
@@ -666,7 +666,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D4-TYPE-PROP.15</h3>
 ; 
 ; EVAL TEST
-; took 0.000563 secs. (562.62 microseconds) 
+; took 0.000625 secs. (624.71 microseconds) 
 
   !(assertEqualToResult 
     (= 
@@ -693,7 +693,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D4-TYPE-PROP.16</h3>
 ; 
 ; EVAL TEST
-; took 0.000395 secs. (395.48 microseconds) 
+; took 0.000503 secs. (502.78 microseconds) 
 
   !(assertEqualToResult 
     (Mortal Plato) 
@@ -719,7 +719,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D4-TYPE-PROP.17</h3>
 ; 
 ; EVAL TEST
-; took 0.000778 secs. (777.58 microseconds) 
+; took 0.000878 secs. (878.34 microseconds) 
 
   !(assertEqual 
     (= 
@@ -756,7 +756,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D4-TYPE-PROP.18</h3>
 ; 
 ; EVAL TEST
-; took 0.000392 secs. (391.72 microseconds) 
+; took 0.000453 secs. (453.04 microseconds) 
 
   !(assertEqual 
     (Mortal Plato) T)
@@ -788,7 +788,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D4-TYPE-PROP.19</h3>
 ; 
 ; EVAL TEST
-; took 0.000625 secs. (624.91 microseconds) 
+; took 0.000614 secs. (613.97 microseconds) 
 
   !(assertEqualToResult 
     (ift 
@@ -804,7 +804,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 754,877 inferences, 0.174 CPU in 0.174 seconds (100% CPU, 4334208 Lips)
+>% 754,873 inferences, 0.175 CPU in 0.175 seconds (100% CPU, 4306037 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/d4_type_prop.metta  0)
 <span class="ansi1"
@@ -839,7 +839,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-05 04:36:57+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-05 04:41:16+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
