@@ -42,7 +42,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-05 04:44:43+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-05 04:46:49+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -55,6 +55,9 @@ Script started on 2024-10-05 04:44:43+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >
 ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:612:
 ERROR:    Full stop in clause-body?  Cannot redefine ,/2
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:1509:
+Warning:    Singleton variables: [Py,I]
 </span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
@@ -160,7 +163,7 @@ ERROR:    Full stop in clause-body?  Cannot redefine ,/2
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (2.64 milliseconds) 
+; took 0.003 secs. (2.59 milliseconds) 
 
   !(assertEqual 
     (stringToChars "xyzzy") 
@@ -184,7 +187,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.25 milliseconds) 
+; took 0.001 secs. (1.18 milliseconds) 
 
   !(assertEqual 
     (charsToString ('x' 'y' 'z' 'z' 'y')) "xyzzy")
@@ -207,7 +210,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000125 secs. (124.78 microseconds) 
+; took 0.000129 secs. (128.86 microseconds) 
 
   !(assertEqual 
     (stringToChars "") ())
@@ -230,7 +233,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000137 secs. (136.82 microseconds) 
+; took 0.000129 secs. (128.54 microseconds) 
 
   !(assertEqual 
     (charsToString ()) "")
@@ -254,7 +257,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.05</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.48 milliseconds) 
+; took 0.002 secs. (1.50 milliseconds) 
 
   !(assertEqual 
     (charsToString (stringToChars "xyzzy")) "xyzzy")
@@ -278,7 +281,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.06</h3>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (4.12 milliseconds) 
+; took 0.004 secs. (4.26 milliseconds) 
 
   !(assertEqual 
     (stringToChars (charsToString ('x' 'y' 'z' 'z' 'y'))) 
@@ -303,7 +306,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.07</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.15 milliseconds) 
+; took 0.001 secs. (1.23 milliseconds) 
 
   !(assertEqual 
     (charsToString ('x' 'y' ' ' 'z' 'y')) "xy zy")
@@ -327,7 +330,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.08</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.38 milliseconds) 
+; took 0.003 secs. (2.51 milliseconds) 
 
   !(assertEqual 
     (stringToChars "xy zy") 
@@ -351,7 +354,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000342 secs. (341.83 microseconds) 
+; took 0.000382 secs. (381.75 microseconds) 
 
   !(assertEqual 
     (charsToString (' ')) " ")
@@ -375,7 +378,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000640 secs. (640.34 microseconds) 
+; took 0.000726 secs. (726.43 microseconds) 
 
   !(assertEqual 
     (stringToChars " ") 
@@ -400,7 +403,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.11</h3>
 ; 
 ; EVAL TEST
-; took 0.006 secs. (5.75 milliseconds) 
+; took 0.006 secs. (5.89 milliseconds) 
 
   !(assertEqual 
     (stringToChars (superpose ("ab" "cd" "ef"))) 
@@ -430,7 +433,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000177 secs. (177.33 microseconds) 
+; took 0.000182 secs. (181.92 microseconds) 
 
   !(assertEqual 
     (format-args "" 
@@ -455,7 +458,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.13</h3>
 ; 
 ; EVAL TEST
-; took 0.000168 secs. (167.94 microseconds) 
+; took 0.000184 secs. (184.49 microseconds) 
 
   !(assertEqual 
     (format-args " " 
@@ -480,7 +483,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.14</h3>
 ; 
 ; EVAL TEST
-; took 0.000375 secs. (375.03 microseconds) 
+; took 0.000391 secs. (390.69 microseconds) 
 
   !(assertEqual 
     (format-args "{}" 
@@ -505,7 +508,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.15</h3>
 ; 
 ; EVAL TEST
-; took 0.000186 secs. (186.12 microseconds) 
+; took 0.000183 secs. (182.71 microseconds) 
 
   !(assertEqual 
     (format-args "{}}" 
@@ -530,7 +533,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.16</h3>
 ; 
 ; EVAL TEST
-; took 0.000171 secs. (171.25 microseconds) 
+; took 0.000176 secs. (176.33 microseconds) 
 
   !(assertEqual 
     (format-args "xyz zy" 
@@ -555,7 +558,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.17</h3>
 ; 
 ; EVAL TEST
-; took 0.000938 secs. (938.35 microseconds) 
+; took 0.000857 secs. (857.30 microseconds) 
 
   !(assertEqual 
     (format-args "Indexed {1} {} {0} {}" 
@@ -581,7 +584,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.18</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.01 milliseconds) 
+; took 0.000986 secs. (986.45 microseconds) 
 
   !(assertEqual 
     (format-args "Different types {} {} {} {} {} {}" 
@@ -607,7 +610,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.19</h3>
 ; 
 ; EVAL TEST
-; took 0.000200 secs. (199.60 microseconds) 
+; took 0.000185 secs. (185.40 microseconds) 
 
   !(assertEqual 
     (format-args "Two digit index={11}" 
@@ -633,7 +636,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.20</h3>
 ; 
 ; EVAL TEST
-; took 0.000504 secs. (503.72 microseconds) 
+; took 0.000484 secs. (484.39 microseconds) 
 
   !(assertEqual 
     (format-args "Bad args list {1} {} {0} {}" x) 
@@ -658,7 +661,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.21</h3>
 ; 
 ; EVAL TEST
-; took 0.000185 secs. (184.95 microseconds) 
+; took 0.000205 secs. (204.59 microseconds) 
 
   !(assertEqual 
     (format-args "Malformed format}{{}{{{}{} {4} { } {-1} {x} {{{{{{}}}}}}{{{{{}}}}}" 
@@ -673,7 +676,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 683,540 inferences, 0.151 CPU in 0.151 seconds (100% CPU, 4520905 Lips)
+>% 683,538 inferences, 0.151 CPU in 0.151 seconds (100% CPU, 4513711 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/string-tests.metta  0)
 <span class="ansi1"
@@ -708,7 +711,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-05 04:44:48+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-05 04:46:55+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

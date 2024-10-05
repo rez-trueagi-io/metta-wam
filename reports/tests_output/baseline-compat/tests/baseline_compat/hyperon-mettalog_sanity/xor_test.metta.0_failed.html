@@ -34,7 +34,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-05 04:46:52+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-05 04:49:01+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -47,6 +47,9 @@ Script started on 2024-10-05 04:46:52+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >
 ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:612:
 ERROR:    Full stop in clause-body?  Cannot redefine ,/2
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:1509:
+Warning:    Singleton variables: [Py,I]
 </span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
@@ -113,7 +116,7 @@ ERROR:    Full stop in clause-body?  Cannot redefine ,/2
 >;; HYPERON-METTALOG-SANITY.XOR-TEST.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000172 secs. (171.69 microseconds) 
+; took 0.000182 secs. (181.86 microseconds) 
 
   !(assertEqual 
     (xor True False) True)
@@ -136,7 +139,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.XOR-TEST.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000162 secs. (162.47 microseconds) 
+; took 0.000157 secs. (157.20 microseconds) 
 
   !(assertEqual 
     (xor False True) True)
@@ -159,7 +162,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.XOR-TEST.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000162 secs. (162.32 microseconds) 
+; took 0.000162 secs. (162.20 microseconds) 
 
   !(assertEqual 
     (xor True True) False)
@@ -182,7 +185,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.XOR-TEST.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000144 secs. (144.50 microseconds) 
+; took 0.000163 secs. (163.11 microseconds) 
 
   !(assertEqual 
     (xor False False) False)
@@ -208,7 +211,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.XOR-TEST.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000411 secs. (411.35 microseconds) 
+; took 0.000423 secs. (423.49 microseconds) 
 
   !(assertEqual 
     (xor 
@@ -235,7 +238,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.XOR-TEST.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000402 secs. (402.43 microseconds) 
+; took 0.000433 secs. (432.67 microseconds) 
 
   !(assertEqual 
     (xor 
@@ -262,7 +265,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.XOR-TEST.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000307 secs. (306.73 microseconds) 
+; took 0.000277 secs. (276.82 microseconds) 
 
   !(assertEqual 
     (xor 
@@ -303,7 +306,7 @@ First
 Second
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.07 milliseconds) 
+; took 0.001 secs. (1.11 milliseconds) 
 
   !(assertEqual 
     (xor 
@@ -369,7 +372,7 @@ First
 Second
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.10 milliseconds) 
+; took 0.001 secs. (1.11 milliseconds) 
 
   !(assertEqual 
     (xor 
@@ -402,7 +405,7 @@ First
 Second
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.05 milliseconds) 
+; took 0.001 secs. (1.08 milliseconds) 
 
   !(assertEqual 
     (xor 
@@ -420,7 +423,7 @@ Second
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 306,632 inferences, 0.077 CPU in 0.077 seconds (100% CPU, 3960903 Lips)
+>% 306,636 inferences, 0.078 CPU in 0.078 seconds (100% CPU, 3918319 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/xor_test.metta  0)
 <span class="ansi1"
@@ -455,7 +458,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-05 04:46:57+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-05 04:49:06+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

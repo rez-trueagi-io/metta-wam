@@ -128,7 +128,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-05 04:40:58+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-05 04:42:57+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -141,6 +141,9 @@ Script started on 2024-10-05 04:40:58+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >
 ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:612:
 ERROR:    Full stop in clause-body?  Cannot redefine ,/2
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:1509:
+Warning:    Singleton variables: [Py,I]
 </span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
@@ -273,7 +276,7 @@ ERROR:    Full stop in clause-body?  Cannot redefine ,/2
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D2-HIGHERFUNC.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000288 secs. (288.28 microseconds) 
+; took 0.000282 secs. (281.73 microseconds) 
 
   !(assertEqual 
     (get-type (curry +)) 
@@ -301,7 +304,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D2-HIGHERFUNC.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000272 secs. (271.92 microseconds) 
+; took 0.000289 secs. (288.97 microseconds) 
 
   !(assertEqual 
     (get-type ((curry +) 2)) 
@@ -327,7 +330,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D2-HIGHERFUNC.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000715 secs. (714.93 microseconds) 
+; took 0.000764 secs. (763.58 microseconds) 
 
   !(assertEqualToResult 
     ( (curry +) 2) 
@@ -352,7 +355,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D2-HIGHERFUNC.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000496 secs. (496.44 microseconds) 
+; took 0.000470 secs. (470.13 microseconds) 
 
   !(assertEqual 
     ( ( (curry +) 2) 3) 5)
@@ -391,7 +394,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D2-HIGHERFUNC.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000331 secs. (331.36 microseconds) 
+; took 0.000335 secs. (335.12 microseconds) 
 
   !(assertEqual 
     (get-type (curry-a + 2)) 
@@ -415,7 +418,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D2-HIGHERFUNC.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000376 secs. (375.80 microseconds) 
+; took 0.000349 secs. (348.51 microseconds) 
 
   !(assertEqual 
     (get-type ((curry-a + 2) 3)) Number)
@@ -439,7 +442,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D2-HIGHERFUNC.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000372 secs. (372.20 microseconds) 
+; took 0.000312 secs. (312.40 microseconds) 
 
   !(assertEqualToResult 
     (get-type ((curry-a + 2) "S")) ())
@@ -462,7 +465,7 @@ Deterministic: ((Error  (got  (Number)) (expected  ())))
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D2-HIGHERFUNC.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000453 secs. (453.43 microseconds) 
+; took 0.000403 secs. (402.71 microseconds) 
 
   !(assertEqual 
     ( (curry-a + 2) 3) 5)
@@ -507,7 +510,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D2-HIGHERFUNC.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000521 secs. (521.23 microseconds) 
+; took 0.000446 secs. (446.38 microseconds) 
 
   !(assertEqualToResult 
     (is-socrates) 
@@ -533,7 +536,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D2-HIGHERFUNC.10</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.03 milliseconds) 
+; took 0.000963 secs. (962.89 microseconds) 
 
   !(assertEqual 
     ( (curry-a is Socrates) Human) 
@@ -558,7 +561,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D2-HIGHERFUNC.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000901 secs. (900.58 microseconds) 
+; took 0.000833 secs. (833.47 microseconds) 
 
   !(assertEqual 
     ( (is-socrates) Human) True)
@@ -598,7 +601,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D2-HIGHERFUNC.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000505 secs. (505.10 microseconds) 
+; took 0.000435 secs. (435.28 microseconds) 
 
   !(assertEqual 
     ( (lambda $x 
@@ -624,7 +627,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D2-HIGHERFUNC.13</h3>
 ; 
 ; EVAL TEST
-; took 0.000691 secs. (691.31 microseconds) 
+; took 0.000629 secs. (629.33 microseconds) 
 
   !(assertEqual 
     ( (lambda 
@@ -659,7 +662,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D2-HIGHERFUNC.14</h3>
 ; 
 ; EVAL TEST
-; took 0.000769 secs. (768.64 microseconds) 
+; took 0.000796 secs. (795.98 microseconds) 
 
   !(assertEqual 
     ( (inc) 5) 6)
@@ -784,7 +787,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D2-HIGHERFUNC.16</h3>
 ; 
 ; EVAL TEST
-; took 0.000785 secs. (785.27 microseconds) 
+; took 0.000809 secs. (808.97 microseconds) 
 
   !(assertEqual 
     (fmap 
@@ -812,7 +815,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D2-HIGHERFUNC.17</h3>
 ; 
 ; EVAL TEST
-; took 0.000871 secs. (870.65 microseconds) 
+; took 0.000903 secs. (903.25 microseconds) 
 
   !(assertEqual 
     (get-type (fmap (curry-a + 1) (Left 5))) 
@@ -841,7 +844,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D2-HIGHERFUNC.18</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.96 milliseconds) 
+; took 0.002 secs. (2.04 milliseconds) 
 
   !(assertEqual 
     (fmap 
@@ -874,7 +877,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D2-HIGHERFUNC.19</h3>
 ; 
 ; EVAL TEST
-; took 0.012 secs. (11.56 milliseconds) 
+; took 0.012 secs. (11.62 milliseconds) 
 
   !(assertEqual 
     (fmap 
@@ -909,7 +912,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D2-HIGHERFUNC.20</h3>
 ; 
 ; EVAL TEST
-; took 0.000384 secs. (383.78 microseconds) 
+; took 0.000406 secs. (406.32 microseconds) 
 
   !(assertEqualToResult 
     (get-type (fmap (curry-a + 2) (Left "5"))) ())
@@ -931,7 +934,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D2-HIGHERFUNC.21</h3>
 ; 
 ; EVAL TEST
-; took 0.000357 secs. (356.54 microseconds) 
+; took 0.000366 secs. (366.36 microseconds) 
 
   !(assertEqualToResult 
     (get-type (fmap (curry-a + 2) (UntypedC "5"))) ())
@@ -953,7 +956,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D2-HIGHERFUNC.22</h3>
 ; 
 ; EVAL TEST
-; took 0.000392 secs. (391.65 microseconds) 
+; took 0.000371 secs. (370.78 microseconds) 
 
   !(assertEqualToResult 
     (get-type (fmap (curry-a + 2) (UntypedC (Null) 5))) ())
@@ -1001,7 +1004,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D2-HIGHERFUNC.23</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.91 milliseconds) 
+; took 0.002 secs. (1.93 milliseconds) 
 
   !(assertEqual 
     (fmap-i 
@@ -1081,7 +1084,7 @@ true]
 >   41:5   |   |   |   |   |   |-<--(defn (retval  Nil)) </span>
 ; 
 ; EVAL TEST
-; took 0.007 secs. (7.18 milliseconds) 
+; took 0.007 secs. (7.28 milliseconds) 
 
   !(assertEqual 
     (fmap-i 
@@ -1127,7 +1130,7 @@ Deterministic: ()
 >    8:1   |   |-<--(defn (retval  fail)) </span>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.44 milliseconds) 
+; took 0.002 secs. (2.34 milliseconds) 
 
   !(assertEqualToResult 
     (fmap-i 
@@ -1218,7 +1221,7 @@ Deterministic: ()
 >   96:3   |   |   |   |-<--(defn (retval  (Cons 1 Nil))) </span>
 ; 
 ; EVAL TEST
-; took 0.011 secs. (11.46 milliseconds) 
+; took 0.012 secs. (11.59 milliseconds) 
 
   !(assertEqual 
     (insert 3 
@@ -1289,7 +1292,7 @@ Deterministic: ()
 >  121:7   |   |   |   |   |   |   |   |-<--(defn (retval  Nil)) </span>
 ; 
 ; EVAL TEST
-; took 0.015 secs. (15.18 milliseconds) 
+; took 0.015 secs. (14.81 milliseconds) 
 
   !(assertEqual 
     (sort (Cons 3 (Cons 1 (Cons 2 Nil)))) 
@@ -1310,7 +1313,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 1,376,296 inferences, 0.300 CPU in 0.300 seconds (100% CPU, 4595156 Lips)
+>% 1,376,302 inferences, 0.302 CPU in 0.302 seconds (100% CPU, 4554491 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/d2_higherfunc.metta  0)
 <span class="ansi1"
@@ -1345,7 +1348,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-05 04:41:03+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-05 04:43:02+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
