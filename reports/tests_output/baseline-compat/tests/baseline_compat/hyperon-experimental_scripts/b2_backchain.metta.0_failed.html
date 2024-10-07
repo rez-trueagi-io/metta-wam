@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -41,7 +40,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-05 04:42:02+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-07 17:21:27+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -50,14 +49,7 @@ Script started on 2024-10-05 04:42:02+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi1 ansi31"
->
-ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:612:
-ERROR:    Full stop in clause-body?  Cannot redefine ,/2
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:1509:
-Warning:    Singleton variables: [Py,I]
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -147,7 +139,7 @@ Warning:    Singleton variables: [Py,I]
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B2-BACKCHAIN.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000325 secs. (325.50 microseconds) 
+; took 0.000320 secs. (319.61 microseconds) 
 
   !(assertEqualToResult 
     (Frog Sam) 
@@ -172,7 +164,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B2-BACKCHAIN.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000361 secs. (360.52 microseconds) 
+; took 0.000371 secs. (370.97 microseconds) 
 
   !(assertEqual 
     (frog Sam) T)
@@ -195,7 +187,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B2-BACKCHAIN.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000333 secs. (333.27 microseconds) 
+; took 0.000358 secs. (357.81 microseconds) 
 
   !(assertEqualToResult 
     (frog Fritz) ())
@@ -269,7 +261,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B2-BACKCHAIN.04</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.32 milliseconds) 
+; took 0.003 secs. (3.45 milliseconds) 
 
   !(assertEqual 
     (deduce (Evaluation (mortal Plato))) T)
@@ -334,7 +326,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B2-BACKCHAIN.05</h3>
 ; 
 ; EVAL TEST
-; took 0.015 secs. (14.89 milliseconds) 
+; took 0.015 secs. (14.91 milliseconds) 
 
   !(assertEqual 
     (explain (Evaluation (mortal Plato))) 
@@ -361,7 +353,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 390,962 inferences, 0.105 CPU in 0.105 seconds (100% CPU, 3709131 Lips)
+>% 390,961 inferences, 0.106 CPU in 0.106 seconds (100% CPU, 3702172 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/b2_backchain.metta  0)
 <span class="ansi1"
@@ -396,7 +388,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-05 04:42:07+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-07 17:21:32+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

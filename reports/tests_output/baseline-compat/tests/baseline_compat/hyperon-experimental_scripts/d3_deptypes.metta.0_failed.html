@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -42,7 +41,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-05 04:43:04+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-07 17:22:27+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -51,14 +50,7 @@ Script started on 2024-10-05 04:43:04+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi1 ansi31"
->
-ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:612:
-ERROR:    Full stop in clause-body?  Cannot redefine ,/2
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:1509:
-Warning:    Singleton variables: [Py,I]
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -167,7 +159,7 @@ Warning:    Singleton variables: [Py,I]
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D3-DEPTYPES.01</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.32 milliseconds) 
+; took 0.001 secs. (1.44 milliseconds) 
 
   !(assertEqual 
     (get-type (Cons 0 (Cons 1 Nil))) 
@@ -206,7 +198,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D3-DEPTYPES.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000673 secs. (673.33 microseconds) 
+; took 0.000753 secs. (753.34 microseconds) 
 
   !(assertEqual 
     (get-type (drop (Cons 1 Nil))) 
@@ -232,7 +224,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D3-DEPTYPES.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000887 secs. (887.11 microseconds) 
+; took 0.000969 secs. (968.94 microseconds) 
 
   !(assertEqual 
     (drop (Cons 2 (Cons 1 Nil))) 
@@ -257,7 +249,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D3-DEPTYPES.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000218 secs. (217.74 microseconds) 
+; took 0.000227 secs. (226.64 microseconds) 
 
   !(assertEqualToResult 
     (get-type (drop Nil)) ())
@@ -300,7 +292,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D3-DEPTYPES.05</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.10 milliseconds) 
+; took 0.000956 secs. (956.10 microseconds) 
 
   !(assertEqual 
     (get-type (ConsN "1" (ConsN "2" NilN))) 
@@ -335,7 +327,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D3-DEPTYPES.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000971 secs. (970.64 microseconds) 
+; took 0.000890 secs. (889.57 microseconds) 
 
   !(assertEqual 
     (get-type (dropN (ConsN "1" NilN))) 
@@ -368,7 +360,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D3-DEPTYPES.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000317 secs. (316.73 microseconds) 
+; took 0.000284 secs. (283.79 microseconds) 
 
   !(assertEqualToResult 
     (dropN NilN) 
@@ -383,7 +375,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 336,613 inferences, 0.098 CPU in 0.098 seconds (100% CPU, 3448913 Lips)
+>% 336,614 inferences, 0.099 CPU in 0.099 seconds (100% CPU, 3416311 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/d3_deptypes.metta  0)
 <span class="ansi1"
@@ -418,7 +410,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-05 04:43:09+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-07 17:22:32+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

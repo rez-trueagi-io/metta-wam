@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -32,7 +31,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-05 04:41:48+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-07 17:21:15+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -41,14 +40,7 @@ Script started on 2024-10-05 04:41:48+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi1 ansi31"
->
-ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:612:
-ERROR:    Full stop in clause-body?  Cannot redefine ,/2
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:1509:
-Warning:    Singleton variables: [Py,I]
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -150,7 +142,7 @@ Warning:    Singleton variables: [Py,I]
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B0-CHAINING-PRELIM.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000670 secs. (669.73 microseconds) 
+; took 0.000561 secs. (560.79 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -185,7 +177,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B0-CHAINING-PRELIM.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000169 secs. (168.69 microseconds) 
+; took 0.000170 secs. (170.48 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -218,7 +210,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B0-CHAINING-PRELIM.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000293 secs. (292.83 microseconds) 
+; took 0.000324 secs. (323.84 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -266,7 +258,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B0-CHAINING-PRELIM.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000747 secs. (746.98 microseconds) 
+; took 0.000620 secs. (620.10 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -305,7 +297,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B0-CHAINING-PRELIM.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000576 secs. (576.41 microseconds) 
+; took 0.000483 secs. (483.47 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -326,7 +318,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 235,620 inferences, 0.071 CPU in 0.071 seconds (100% CPU, 3329273 Lips)
+>% 235,619 inferences, 0.070 CPU in 0.070 seconds (100% CPU, 3375304 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/b0_chaining_prelim.metta  0)
 <span class="ansi1"
@@ -361,7 +353,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-05 04:41:53+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-07 17:21:20+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
