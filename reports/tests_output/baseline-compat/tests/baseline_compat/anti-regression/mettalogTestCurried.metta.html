@@ -85,8 +85,10 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 07:49:30+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-09 10:03:48+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi1 ansi31"
+>ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_eval.pl:1127:7: Syntax error: Operator expected
+</span>P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -94,7 +96,11 @@ Script started on 2024-10-09 07:49:30+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi31"
+>
+Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_help.pl:16:
+Warning:    Singleton variables: [Path]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -2601,7 +2607,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.METTALOGTESTCURRIED.01</h3>
 ; 
 ; EVAL TEST
-; took 13.06 seconds.
+; took 13.10 seconds.
 
   !(let $expected 
     (expected) 
@@ -3628,7 +3634,7 @@ Deterministic: ()
 ;<h3 id="ANTI-REGRESSION.METTALOGTESTCURRIED.02"
 >;; ANTI-REGRESSION.METTALOGTESTCURRIED.02</h3>
 
-Script done on 2024-10-09 07:50:10+00:00 [COMMAND_EXIT_CODE="143"]
+Script done on 2024-10-09 10:04:28+00:00 [COMMAND_EXIT_CODE="143"]
 
 </pre>
 </body>

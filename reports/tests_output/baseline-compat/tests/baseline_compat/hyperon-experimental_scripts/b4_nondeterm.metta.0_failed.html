@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -53,8 +54,10 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 07:51:42+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-09 10:06:08+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi1 ansi31"
+>ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_eval.pl:1127:7: Syntax error: Operator expected
+</span>P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -62,7 +65,11 @@ Script started on 2024-10-09 07:51:42+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi31"
+>
+Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_help.pl:16:
+Warning:    Singleton variables: [Path]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -171,7 +178,7 @@ Script started on 2024-10-09 07:51:42+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000324 secs. (323.86 microseconds) 
+; took 0.000326 secs. (326.36 microseconds) 
 
   !(assertEqual 
     (match &self 
@@ -205,7 +212,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000229 secs. (229.47 microseconds) 
+; took 0.000241 secs. (241.48 microseconds) 
 
   !(assertEqual 
     (collapse (match &self (= (shape) $x) $x)) ())
@@ -234,7 +241,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000413 secs. (413.04 microseconds) 
+; took 0.000490 secs. (489.76 microseconds) 
 
   !(assertEqual 
     (color) 
@@ -266,7 +273,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000950 secs. (949.94 microseconds) 
+; took 0.000874 secs. (873.98 microseconds) 
 
   !(assertEqual 
     (color) 
@@ -298,7 +305,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.05</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.39 milliseconds) 
+; took 0.001 secs. (1.37 milliseconds) 
 
   !(assertEqual 
     (collapse (shape)) 
@@ -323,7 +330,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000214 secs. (213.73 microseconds) 
+; took 0.000244 secs. (243.74 microseconds) 
 
   !(assertEqualToResult 
     (shape) 
@@ -429,7 +436,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.08</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.84 milliseconds) 
+; took 0.002 secs. (1.78 milliseconds) 
 
   !(assertEqual 
     (find-equal 
@@ -467,7 +474,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.09</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.04 milliseconds) 
+; took 0.000985 secs. (985.17 microseconds) 
 
   !(assertEqualToResult 
     (rev A 
@@ -558,7 +565,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.10</h3>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (3.89 milliseconds) 
+; took 0.004 secs. (3.93 milliseconds) 
 
   !(assertEqual 
     (is (air dry)) 
@@ -587,7 +594,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.11</h3>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (3.81 milliseconds) 
+; took 0.004 secs. (3.91 milliseconds) 
 
   !(assertEqual 
     (is (air wet)) 
@@ -606,7 +613,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 565,561 inferences, 0.120 CPU in 0.120 seconds (100% CPU, 4720877 Lips)
+>% 566,060 inferences, 0.120 CPU in 0.120 seconds (100% CPU, 4698861 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/b4_nondeterm.metta  0)
 <span class="ansi1"
@@ -641,7 +648,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-09 07:51:48+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-09 10:06:13+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

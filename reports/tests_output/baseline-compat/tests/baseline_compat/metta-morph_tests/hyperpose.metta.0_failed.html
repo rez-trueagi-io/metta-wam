@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -35,8 +36,10 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 07:59:14+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-09 10:14:10+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi1 ansi31"
+>ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_eval.pl:1127:7: Syntax error: Operator expected
+</span>P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -44,7 +47,11 @@ Script started on 2024-10-09 07:59:14+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi31"
+>
+Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_help.pl:16:
+Warning:    Singleton variables: [Path]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -135,7 +142,7 @@ Script started on 2024-10-09 07:59:14+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; METTA-MORPH-TESTS.HYPERPOSE.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000294 secs. (293.65 microseconds) 
+; took 0.000285 secs. (285.04 microseconds) 
 
   !(assertEqual 
     (hyperpose (1 2)) 
@@ -160,7 +167,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.HYPERPOSE.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000565 secs. (565.35 microseconds) 
+; took 0.000618 secs. (617.77 microseconds) 
 
   !(assertEqual 
     (hyperpose (1 (If (== 1 2) 1))) 
@@ -185,7 +192,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.HYPERPOSE.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000568 secs. (567.72 microseconds) 
+; took 0.000593 secs. (593.17 microseconds) 
 
   !(assertEqual 
     (hyperpose ((If (== 1 2) 1) 1)) 
@@ -210,7 +217,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.HYPERPOSE.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000250 secs. (250.44 microseconds) 
+; took 0.000314 secs. (314.43 microseconds) 
 
   !(assertEqual 
     (hyperpose (1 2 3)) 
@@ -235,7 +242,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.HYPERPOSE.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000522 secs. (521.91 microseconds) 
+; took 0.000607 secs. (606.54 microseconds) 
 
   !(assertEqual 
     (hyperpose ((If (== 1 2) 1) 2 3)) 
@@ -260,7 +267,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.HYPERPOSE.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000503 secs. (503.43 microseconds) 
+; took 0.000613 secs. (612.79 microseconds) 
 
   !(assertEqual 
     (hyperpose (1 (If (== 1 2) 1) 3)) 
@@ -285,7 +292,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.HYPERPOSE.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000503 secs. (502.51 microseconds) 
+; took 0.000602 secs. (601.74 microseconds) 
 
   !(assertEqual 
     (hyperpose (1 2 (If (== 1 2) 1))) 
@@ -310,7 +317,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.HYPERPOSE.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000729 secs. (728.81 microseconds) 
+; took 0.000754 secs. (754.01 microseconds) 
 
   !(assertEqual 
     (hyperpose (1 (If (== 1 2) 1) (If (== 1 2) 1))) 
@@ -335,7 +342,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.HYPERPOSE.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000265 secs. (265.47 microseconds) 
+; took 0.000267 secs. (267.17 microseconds) 
 
   !(assertEqual 
     (hyperpose (1 2 3 4)) 
@@ -360,7 +367,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.HYPERPOSE.10</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.14 milliseconds) 
+; took 0.001 secs. (1.13 milliseconds) 
 
   !(assertEqual 
     (hyperpose ((1 2) (3 4))) 
@@ -375,7 +382,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 317,283 inferences, 0.056 CPU in 0.056 seconds (100% CPU, 5685918 Lips)
+>% 317,644 inferences, 0.056 CPU in 0.056 seconds (100% CPU, 5713887 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/hyperpose.metta  0)
 <span class="ansi1"
@@ -410,7 +417,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-09 07:59:19+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-09 10:14:15+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
