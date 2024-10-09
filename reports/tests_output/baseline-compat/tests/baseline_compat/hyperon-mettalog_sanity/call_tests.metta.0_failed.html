@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -30,10 +29,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 10:09:03+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi1 ansi31"
->ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_eval.pl:1127:7: Syntax error: Operator expected
-</span>P;HTML|
+Script started on 2024-10-09 17:24:03+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -41,11 +38,7 @@ Script started on 2024-10-09 10:09:03+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi31"
->
-Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_help.pl:16:
-Warning:    Singleton variables: [Path]
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -102,9 +95,9 @@ Warning:    Singleton variables: [Path]
 P;HTML|
 ;                                           (= 2  "Missed result: ())]")
 P;HTML|
-;                                           (= 2  "0.03user 0.00system 0:00.04elapsed 97%CPU (0avgtext+0avgdata 24832maxresident)k")
+;                                           (= 2  "0.03user 0.00system 0:00.04elapsed 100%CPU (0avgtext+0avgdata 24848maxresident)k")
 P;HTML|
-;                                           (= 2  "0inputs+0outputs (0major+2833minor)pagefaults 0swaps")
+;                                           (= 2  "0inputs+0outputs (0major+2840minor)pagefaults 0swaps")
 P;HTML|
 ;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/call_tests.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/call_tests.metta)
 
@@ -120,7 +113,7 @@ Warning:    Singleton variables: [Path]
 >;; HYPERON-METTALOG-SANITY.CALL-TESTS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000197 secs. (197.33 microseconds) 
+; took 0.000182 secs. (182.00 microseconds) 
 
   !(assertEqualToResult 
     (call-string! "member(1,[1,2,3])") 
@@ -144,7 +137,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CALL-TESTS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000142 secs. (141.60 microseconds) 
+; took 0.000159 secs. (159.14 microseconds) 
 
   !(assertEqualToResult 
     (call-string! "member(1,[1,2,3])") ())
@@ -169,7 +162,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CALL-TESTS.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000358 secs. (357.63 microseconds) 
+; took 0.000363 secs. (363.18 microseconds) 
 
   !(assertEqualToResult 
     (call-string! "member(X,[1,2,3])") 
@@ -225,7 +218,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CALL-TESTS.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000503 secs. (502.99 microseconds) 
+; took 0.000441 secs. (440.68 microseconds) 
 
   !(assertEqualToResult 
     (call-string! "member([X,Y],[[1,2],[3,4]])") 
@@ -255,7 +248,7 @@ Deterministic: ()
 
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.10 milliseconds) 
+; took 0.001 secs. (1.12 milliseconds) 
 
   !(assertEqualToResult 
     (call! parse_time "2006-12-08T15:29:44Z" iso_8601 1165591784.0) 
@@ -284,7 +277,7 @@ Deterministic: ()
 
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.74 milliseconds) 
+; took 0.002 secs. (1.71 milliseconds) 
 
   !(assertEqualToResult 
     (call! parse_time "2006-12-08T15:29:44Z" iso_8601 $x) 
@@ -314,7 +307,7 @@ Deterministic: ()
 
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.03 milliseconds) 
+; took 0.000986 secs. (985.81 microseconds) 
 
   !(assertEqualToResult 
     (call! parse_time "2006-12-08T15:29:44Z" iso_8601 X) 
@@ -344,7 +337,7 @@ Deterministic: ()
 
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.02 milliseconds) 
+; took 0.001 secs. (1.04 milliseconds) 
 
   !(assertEqualToResult 
     (call! parse_time "2006-12-08T15:29:44Z" iso_8601 1165591700.0) 
@@ -359,7 +352,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 268,855 inferences, 0.048 CPU in 0.048 seconds (100% CPU, 5622994 Lips)
+>% 268,872 inferences, 0.047 CPU in 0.047 seconds (100% CPU, 5674118 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/call_tests.metta  0)
 <span class="ansi1"
@@ -394,7 +387,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-09 10:09:08+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-09 17:24:08+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

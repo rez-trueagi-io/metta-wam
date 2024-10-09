@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -50,10 +49,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 10:16:21+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi1 ansi31"
->ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_eval.pl:1127:7: Syntax error: Operator expected
-</span>P;HTML|
+Script started on 2024-10-09 17:30:44+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -61,11 +58,7 @@ Script started on 2024-10-09 10:16:21+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi31"
->
-Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_help.pl:16:
-Warning:    Singleton variables: [Path]
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -170,7 +163,7 @@ Warning:    Singleton variables: [Path]
 >;; METTA-MORPH-TESTS.SUPERCOLLAPSE.01</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.35 milliseconds) 
+; took 0.002 secs. (2.37 milliseconds) 
 
   !(assertEqualToResult 
     (TupleConcat 
@@ -204,7 +197,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SUPERCOLLAPSE.02</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.31 milliseconds) 
+; took 0.001 secs. (1.39 milliseconds) 
 
   !(assertEqualToResult 
     (TupleConcat () 
@@ -237,7 +230,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SUPERCOLLAPSE.03</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.43 milliseconds) 
+; took 0.001 secs. (1.47 milliseconds) 
 
   !(assertEqualToResult 
     (TupleConcat 
@@ -281,7 +274,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SUPERCOLLAPSE.04</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.75 milliseconds) 
+; took 0.002 secs. (1.86 milliseconds) 
 
   !(assertEqualToResult 
     (TupleConcat 
@@ -319,7 +312,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SUPERCOLLAPSE.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000476 secs. (475.63 microseconds) 
+; took 0.000423 secs. (422.67 microseconds) 
 
   !(assertEqualToResult 
     (range 1 1) 
@@ -349,7 +342,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SUPERCOLLAPSE.06</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.26 milliseconds) 
+; took 0.003 secs. (3.33 milliseconds) 
 
   !(assertEqualToResult 
     (range 1 3) 
@@ -379,7 +372,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SUPERCOLLAPSE.07</h3>
 ; 
 ; EVAL TEST
-; took 0.007 secs. (6.66 milliseconds) 
+; took 0.007 secs. (6.81 milliseconds) 
 
   !(assertEqualToResult 
     (range 2 6) 
@@ -409,7 +402,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SUPERCOLLAPSE.08</h3>
 ; 
 ; EVAL TEST
-; took 0.015 secs. (15.37 milliseconds) 
+; took 0.016 secs. (15.63 milliseconds) 
 
   !(assertEqualToResult 
     (range 1 10) 
@@ -424,7 +417,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 482,520 inferences, 0.089 CPU in 0.089 seconds (100% CPU, 5420584 Lips)
+>% 482,523 inferences, 0.089 CPU in 0.089 seconds (100% CPU, 5400441 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/supercollapse.metta  0)
 <span class="ansi1"
@@ -459,7 +452,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-09 10:16:26+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-09 17:30:49+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

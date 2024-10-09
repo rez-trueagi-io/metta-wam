@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -42,10 +41,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 10:16:44+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi1 ansi31"
->ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_eval.pl:1127:7: Syntax error: Operator expected
-</span>P;HTML|
+Script started on 2024-10-09 17:31:05+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -53,11 +50,7 @@ Script started on 2024-10-09 10:16:44+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi31"
->
-Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_help.pl:16:
-Warning:    Singleton variables: [Path]
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -151,7 +144,7 @@ Warning:    Singleton variables: [Path]
 >;; METTA-MORPH-TESTS.TYPES2.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000172 secs. (172.18 microseconds) 
+; took 0.000188 secs. (187.89 microseconds) 
 
   !(assertEqualToResult 
     (get-type lion1) 
@@ -181,7 +174,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.TYPES2.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000308 secs. (308.12 microseconds) 
+; took 0.000364 secs. (363.79 microseconds) 
 
   !(assertEqualToResult 
     (reproduce lion1 lion2) 
@@ -211,7 +204,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.TYPES2.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000151 secs. (150.77 microseconds) 
+; took 0.000143 secs. (143.12 microseconds) 
 
   !(assertEqualToResult 
     (get-type Lion) 
@@ -243,7 +236,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.TYPES2.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000200 secs. (199.87 microseconds) 
+; took 0.000200 secs. (199.80 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -276,7 +269,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.TYPES2.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000185 secs. (185.24 microseconds) 
+; took 0.000216 secs. (216.45 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -292,7 +285,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 189,206 inferences, 0.043 CPU in 0.043 seconds (100% CPU, 4381761 Lips)
+>% 189,209 inferences, 0.043 CPU in 0.043 seconds (100% CPU, 4401656 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/types2.metta  0)
 <span class="ansi1"
@@ -327,7 +320,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-09 10:16:49+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-09 17:31:10+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
