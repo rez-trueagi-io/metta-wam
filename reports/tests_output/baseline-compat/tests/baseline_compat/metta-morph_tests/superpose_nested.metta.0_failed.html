@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165009 { color: #FFA509; }
@@ -32,201 +33,412 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 17:30:51+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-19 20:47:44+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
-;           (set_option_value  prolog false)
+;           (set_option_value  compat false)
 
 P;HTML|
-;           (set_option_value  compat auto)
+;           (set_option_value  compatio false)
 
 P;HTML|
-;           (set_option_value  compatio true)
+;           (set_option_value  src_indents false)
+
+P;HTML|
+;         (set_option_value  devel false)
+
+P;HTML|
+;         (set_option_value  stack-max 500)
+
+P;HTML|
+;         (set_option_value  limit inf)
+
+P;HTML|
+;         (set_option_value  initial-result-count 10)
+
+P;HTML|
+;         (set_option_value  answer-format show)
+
+P;HTML|
+;         (set_option_value  repeats true)
+
+P;HTML|
+;         (set_option_value  time true)
+
+P;HTML|
+;         (set_option_value  synth-unit-tests false)
+
+P;HTML|
+;         (set_option_value  optimize true)
+
+P;HTML|
+;         (set_option_value  transpiler silent)
+
+P;HTML|
+;          (set_debug  transpiler false)
+
+P;HTML|
+;         (set_option_value  compile false)
+
+P;HTML|
+;         (set_option_value  tabling auto)
+
+P;HTML|
+;         (set_option_value  log false)
+
+P;HTML|
+;         (set_option_value  output ./)
+
+P;HTML|
+;         (set_option_value  exeout ./Sav.gitlab.MeTTaLog)
+
+P;HTML|
+;         (set_option_value  halt false)
+
+P;HTML|
+;         (set_option_value  trace-length 500)
+
+P;HTML|
+;         (set_option_value  trace-on-overtime 4.0)
+
+P;HTML|
+;          (set_debug  overtime 4.0)
+
+P;HTML|
+;         (set_option_value  trace-on-overflow 1000)
+
+P;HTML|
+;          (set_debug  overflow 1000)
+
+P;HTML|
+;         (set_option_value  trace-on-eval false)
+
+P;HTML|
+;          (set_debug  eval false)
+
+P;HTML|
+;         (set_option_value  trace-on-load silent)
+
+P;HTML|
+;          (set_debug  load silent)
+
+P;HTML|
+;          (set_debug  trace-on-load false)
+
+P;HTML|
+;         (set_option_value  trace-on-exec false)
+
+P;HTML|
+;          (set_debug  exec false)
+
+P;HTML|
+;         (set_option_value  trace-on-error non-type)
+
+P;HTML|
+;          (set_debug  error non-type)
+
+P;HTML|
+;         (set_option_value  trace-on-fail false)
+
+P;HTML|
+;          (set_debug  fail false)
+
+P;HTML|
+;         (set_option_value  trace-on-test true)
+
+P;HTML|
+;          (set_debug  test true)
+
+P;HTML|
+;         (set_option_value  repl-on-error true)
+
+P;HTML|
+;         (set_option_value  repl-on-fail false)
+
+P;HTML|
+;         (set_option_value  exit-on-fail false)
+
+P;HTML|
+;         (set_option_value  repl auto)
+
+P;HTML|
+;         (set_option_value  prolog false)
+
+P;HTML|
+;         (set_option_value  exec noskip)
+
+P;HTML|
+;         (set_option_value  maximum-result-count inf)
+
+P;HTML|
+;         (set_option_value  html false)
+
+P;HTML|
+;         (set_option_value  python true)
+
+P;HTML|
+;         (set_option_value  trace-on-test false)
+
+P;HTML|
+;         (set_debug  test false)
+
+P;HTML|
+;         (set_option_value  trace-on-fail false)
+
+P;HTML|
+;         (set_debug  fail false)
+
+P;HTML|
+;         (set_option_value  load show)
+
+P;HTML|
+;         (set_option_value  test false)
 P;HTML|
-;            (is_cmd_option  prescan halt --halt=true true)
+;          (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
-;            (set_option_value  halt true)
+;          (set_option_value  halt true)
 P;HTML|
-;            (is_cmd_option  prescan stdin --stdin=tty tty)
+;          (is_cmd_option  prescan stdin --stdin=tty tty)
 P;HTML|
-;             (set_option_value  stdin tty)
+;           (set_option_value  stdin tty)
 P;HTML|
-;            (is_cmd_option  prescan stdout --stdout=tty tty)
+;          (is_cmd_option  prescan stdout --stdout=tty tty)
 P;HTML|
-;             (set_option_value  stdout tty)
+;           (set_option_value  stdout tty)
 P;HTML|
-;            (is_cmd_option  prescan stderr --stderr=tty tty)
+;          (is_cmd_option  prescan stderr --stderr=tty tty)
 P;HTML|
-;             (set_option_value  stderr tty)
+;           (set_option_value  stderr tty)
 P;HTML|
-;            (set_option_value  prolog false)
+;          (set_option_value  compat false)
 P;HTML|
-;            (set_option_value  compat auto)
+;          (set_option_value  compatio false)
 P;HTML|
-;            (set_option_value  compatio true)
+;          (set_option_value  src_indents false)
 P;HTML|
-;          (is_cmd_option  execute python --python=enable enable)
+;          (set_option_value  devel false)
 P;HTML|
-;           (set_option_value  python enable)
+;          (set_option_value  stack-max 500)
 P;HTML|
-;          (is_cmd_option  execute timeout --timeout=40 40)
+;          (set_option_value  limit inf)
 P;HTML|
-;           (set_option_value  timeout 40)
+;          (set_option_value  initial-result-count 10)
 P;HTML|
-;           (is_cmd_option  execute output --output=./reports/tests_output/baseline-compat/ ./reports/tests_output/baseline-compat/)
+;          (set_option_value  answer-format show)
 P;HTML|
-;           (set_option_value  output ./reports/tests_output/baseline-compat/)
+;          (set_option_value  repeats true)
 P;HTML|
-;           (is_cmd_option  execute html --html true)
+;          (set_option_value  time true)
 P;HTML|
-;            (set_option_value  html true)
+;          (set_option_value  synth-unit-tests false)
 P;HTML|
-;           (is_cmd_option  execute test --test true)
+;          (set_option_value  optimize true)
 P;HTML|
-;            (set_option_value  test true)
+;          (set_option_value  transpiler silent)
+P;HTML|
+;          (set_debug  transpiler false)
+P;HTML|
+;          (set_option_value  compile false)
+P;HTML|
+;          (set_option_value  tabling auto)
+P;HTML|
+;          (set_option_value  log false)
+P;HTML|
+;          (set_option_value  output ./)
+P;HTML|
+;          (set_option_value  exeout ./Sav.gitlab.MeTTaLog)
+P;HTML|
+;          (set_option_value  halt false)
+P;HTML|
+;          (set_option_value  trace-length 500)
+P;HTML|
+;          (set_option_value  trace-on-overtime 4.0)
+P;HTML|
+;          (set_debug  overtime 4.0)
+P;HTML|
+;          (set_option_value  trace-on-overflow 1000)
+P;HTML|
+;          (set_debug  overflow 1000)
+P;HTML|
+;          (set_option_value  trace-on-eval false)
+P;HTML|
+;          (set_debug  eval false)
+P;HTML|
+;          (set_option_value  trace-on-load silent)
+P;HTML|
+;          (set_debug  load silent)
+P;HTML|
+;          (set_debug  trace-on-load false)
+P;HTML|
+;          (set_option_value  trace-on-exec false)
+P;HTML|
+;          (set_debug  exec false)
+P;HTML|
+;          (set_option_value  trace-on-error non-type)
+P;HTML|
+;          (set_debug  error non-type)
+P;HTML|
+;          (set_option_value  trace-on-fail false)
+P;HTML|
+;          (set_debug  fail false)
+P;HTML|
+;          (set_option_value  trace-on-test true)
+P;HTML|
+;          (set_debug  test true)
+P;HTML|
+;          (set_option_value  repl-on-error true)
+P;HTML|
+;          (set_option_value  repl-on-fail false)
+P;HTML|
+;          (set_option_value  exit-on-fail false)
+P;HTML|
+;          (set_option_value  repl auto)
+P;HTML|
+;          (set_option_value  prolog false)
+P;HTML|
+;          (set_option_value  exec noskip)
+P;HTML|
+;          (set_option_value  maximum-result-count inf)
+P;HTML|
+;          (set_option_value  html false)
+P;HTML|
+;          (set_option_value  python true)
+P;HTML|
+;         (set_option_value  trace-on-test false)
+P;HTML|
+;          (set_debug  test false)
+P;HTML|
+;         (set_option_value  trace-on-fail false)
+P;HTML|
+;          (set_debug  fail false)
+P;HTML|
+;         (set_option_value  load show)
+P;HTML|
+;         (set_option_value  test true)
+P;HTML|
+;        (is_cmd_option  execute python --python=enable enable)
+P;HTML|
+;         (set_option_value  python enable)
+P;HTML|
+;        (is_cmd_option  execute timeout --timeout=40 40)
+P;HTML|
+;         (set_option_value  timeout 40)
+P;HTML|
+;         (is_cmd_option  execute output --output=./reports/tests_output/baseline-compat/ ./reports/tests_output/baseline-compat/)
+P;HTML|
+;         (set_option_value  output ./reports/tests_output/baseline-compat/)
+P;HTML|
+;         (is_cmd_option  execute html --html true)
+P;HTML|
+;          (set_option_value  html true)
+P;HTML|
+;         (is_cmd_option  execute test --test true)
+P;HTML|
+;          (set_option_value  test true)
 
 ; (load_metta_file  &self tests/baseline_compat/metta-morph_tests/superpose_nested.metta)
 P;HTML|
-;                         (track_load_into_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/superpose_nested.metta)
+;                       (track_load_into_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/superpose_nested.metta)
 P;HTML|
-;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/superpose_nested.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/superpose_nested.metta)
+;                                        (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/superpose_nested.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/superpose_nested.metta)
 P;HTML|
-;                                           (= 1  "[a, b, c]")
+;                                         (= 1  "[a, b, c]")
 P;HTML|
-;                                           (= 2  "[a, b, c]")
+;                                         (= 2  "[a, b, c]")
 P;HTML|
-;                                           (= 3  "[a, b, c, x, y, z]")
+;                                         (= 3  "[a, b, c, x, y, z]")
 P;HTML|
-;                                           (= 4  "[a, b, c, x, y, z]")
+;                                         (= 4  "[a, b, c, x, y, z]")
 P;HTML|
-;                                           (= 5  "0.05user 0.00system 0:00.05elapsed 100%CPU (0avgtext+0avgdata 31136maxresident)k")
+;                                         (= 5  "0.05user 0.00system 0:00.05elapsed 100%CPU (0avgtext+0avgdata 31136maxresident)k")
 P;HTML|
-;                                           (= 5  "0inputs+0outputs (0major+3667minor)pagefaults 0swaps")
+;                                         (= 5  "0inputs+0outputs (0major+3667minor)pagefaults 0swaps")
 P;HTML|
-;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/superpose_nested.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/superpose_nested.metta)
+;                                        (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/superpose_nested.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/superpose_nested.metta)
 <span class="ansi38-255165009"
 >;; In file as:  
 </span><span class="ansi1 ansi38-255238088"
->  !(superpose (a b c))
+>!(superpose (a b c))
 </span>;; To unit test case:
 <span class="ansi38-013099040"
->  !(assertEqualToResult 
-    (superpose (a b c)) 
-    (a b c))
+>!(assertEqualToResult (superpose (a b c)) (a b c))
 
-</span>[
-
+</span>
 ;<h3 id="METTA-MORPH-TESTS.SUPERPOSE-NESTED.01"
 >;; METTA-MORPH-TESTS.SUPERPOSE-NESTED.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000173 secs. (173.13 microseconds) 
+; took 0.000189 secs. (189.38 microseconds) 
 
-  !(assertEqualToResult 
-    (superpose (a b c)) 
-    (a b c))
+!(assertEqualToResult (superpose (a b c)) (a b c))
 
 <span class="ansi36"
->  (loonit_success  
-    (equal_enough_for_test  
-      (a b c) 
-      (a b c)))
+>(loonit_success  (equal_enough_for_test  (a b c) (a b c)))
 </span>
-Deterministic: ()
-()]
-<span class="ansi38-255165009"
+Deterministic: ()<span class="ansi38-255165009"
 >;; In file as:  
 </span><span class="ansi1 ansi38-255238088"
->  !(superpose ((superpose (a b c))))
+>!(superpose ((superpose (a b c))))
 </span>;; To unit test case:
 <span class="ansi38-013099040"
->  !(assertEqualToResult 
-    (superpose ((superpose (a b c)))) 
-    (a b c))
+>!(assertEqualToResult (superpose ((superpose (a b c)))) (a b c))
 
-</span>[
-
+</span>
 ;<h3 id="METTA-MORPH-TESTS.SUPERPOSE-NESTED.02"
 >;; METTA-MORPH-TESTS.SUPERPOSE-NESTED.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000224 secs. (223.89 microseconds) 
+; took 0.000235 secs. (235.35 microseconds) 
 
-  !(assertEqualToResult 
-    (superpose ((superpose (a b c)))) 
-    (a b c))
+!(assertEqualToResult (superpose ((superpose (a b c)))) (a b c))
 
 <span class="ansi36"
->  (loonit_success  
-    (equal_enough_for_test  
-      (a b c) 
-      (a b c)))
+>(loonit_success  (equal_enough_for_test  (a b c) (a b c)))
 </span>
-Deterministic: ()
-()]
-<span class="ansi38-255165009"
+Deterministic: ()<span class="ansi38-255165009"
 >;; In file as:  
 </span><span class="ansi1 ansi38-255238088"
->  !(superpose ((superpose (a b c)) (superpose (x y z))))
+>!(superpose ((superpose (a b c)) (superpose (x y z))))
 </span>;; To unit test case:
 <span class="ansi38-013099040"
->  !(assertEqualToResult 
-    (superpose ((superpose (a b c)) (superpose (x y z)))) 
-    (a b c x y z))
+>!(assertEqualToResult (superpose ((superpose (a b c)) (superpose (x y z)))) (a b c x y z))
 
-</span>[
-
+</span>
 ;<h3 id="METTA-MORPH-TESTS.SUPERPOSE-NESTED.03"
 >;; METTA-MORPH-TESTS.SUPERPOSE-NESTED.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000420 secs. (420.08 microseconds) 
+; took 0.000327 secs. (326.75 microseconds) 
 
-  !(assertEqualToResult 
-    (superpose ((superpose (a b c)) (superpose (x y z)))) 
-    (a b c x y z))
+!(assertEqualToResult (superpose ((superpose (a b c)) (superpose (x y z)))) (a b c x y z))
 
 <span class="ansi36"
->  (loonit_success  
-    (equal_enough_for_test  
-      (a b c x y z) 
-      (a b c x y z)))
+>(loonit_success  (equal_enough_for_test  (a b c x y z) (a b c x y z)))
 </span>
-Deterministic: ()
-()]
-<span class="ansi38-255165009"
+Deterministic: ()<span class="ansi38-255165009"
 >;; In file as:  
 </span><span class="ansi1 ansi38-255238088"
->  !(superpose ((superpose (a b c)) x y z))
+>!(superpose ((superpose (a b c)) x y z))
 </span>;; To unit test case:
 <span class="ansi38-013099040"
->  !(assertEqualToResult 
-    (superpose ((superpose (a b c)) x y z)) 
-    (a b c x y z))
+>!(assertEqualToResult (superpose ((superpose (a b c)) x y z)) (a b c x y z))
 
-</span>[
-
+</span>
 ;<h3 id="METTA-MORPH-TESTS.SUPERPOSE-NESTED.04"
 >;; METTA-MORPH-TESTS.SUPERPOSE-NESTED.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000296 secs. (296.12 microseconds) 
+; took 0.000261 secs. (260.95 microseconds) 
 
-  !(assertEqualToResult 
-    (superpose ((superpose (a b c)) x y z)) 
-    (a b c x y z))
+!(assertEqualToResult (superpose ((superpose (a b c)) x y z)) (a b c x y z))
 
 <span class="ansi36"
->  (loonit_success  
-    (equal_enough_for_test  
-      (a b c x y z) 
-      (a b c x y z)))
+>(loonit_success  (equal_enough_for_test  (a b c x y z) (a b c x y z)))
 </span>
-Deterministic: ()
-()]
-<span class="ansi32"
->% 152,388 inferences, 0.028 CPU in 0.028 seconds (100% CPU, 5350102 Lips)
+Deterministic: ()<span class="ansi32"
+>
+% 184,857 inferences, 0.050 CPU in 0.050 seconds (99% CPU, 3699875 Lips)
 </span>P;HTML|
-;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/superpose_nested.metta  0)
+;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/superpose_nested.metta  0)
 <span class="ansi1"
 >LoonIt Report
 </span>------------
@@ -237,29 +449,137 @@ Deterministic: ()
 </span><br/> <a href="#" onclick="window.history.back(); return false;"
 >Return to summaries</a><br/>
 P;HTML|
-;           (is_cmd_option  execute halt --halt=true true)
+;         (is_cmd_option  execute halt --halt=true true)
 P;HTML|
-;            (set_option_value  halt true)
+;          (set_option_value  halt true)
 P;HTML|
-;            (is_cmd_option  execute stdin --stdin=tty tty)
+;          (is_cmd_option  execute stdin --stdin=tty tty)
 P;HTML|
-;            (set_option_value  stdin tty)
+;          (set_option_value  stdin tty)
 P;HTML|
-;            (is_cmd_option  execute stdout --stdout=tty tty)
+;          (is_cmd_option  execute stdout --stdout=tty tty)
 P;HTML|
-;             (set_option_value  stdout tty)
+;           (set_option_value  stdout tty)
 P;HTML|
-;            (is_cmd_option  execute stderr --stderr=tty tty)
+;          (is_cmd_option  execute stderr --stderr=tty tty)
 P;HTML|
-;             (set_option_value  stderr tty)
+;           (set_option_value  stderr tty)
 P;HTML|
-;           (set_option_value  prolog false)
+;         (set_option_value  compat false)
 P;HTML|
-;           (set_option_value  compat auto)
+;         (set_option_value  compatio false)
 P;HTML|
-;           (set_option_value  compatio true)
-
-Script done on 2024-10-09 17:30:56+00:00 [COMMAND_EXIT_CODE="7"]
+;         (set_option_value  src_indents false)
+P;HTML|
+;         (set_option_value  devel false)
+P;HTML|
+;         (set_option_value  stack-max 500)
+P;HTML|
+;         (set_option_value  limit inf)
+P;HTML|
+;         (set_option_value  initial-result-count 10)
+P;HTML|
+;         (set_option_value  answer-format show)
+P;HTML|
+;         (set_option_value  repeats true)
+P;HTML|
+;         (set_option_value  time true)
+P;HTML|
+;         (set_option_value  synth-unit-tests false)
+P;HTML|
+;         (set_option_value  optimize true)
+P;HTML|
+;         (set_option_value  transpiler silent)
+P;HTML|
+;          (set_debug  transpiler false)
+P;HTML|
+;         (set_option_value  compile false)
+P;HTML|
+;         (set_option_value  tabling auto)
+P;HTML|
+;         (set_option_value  log false)
+P;HTML|
+;         (set_option_value  output ./)
+P;HTML|
+;         (set_option_value  exeout ./Sav.gitlab.MeTTaLog)
+P;HTML|
+;         (set_option_value  halt false)
+P;HTML|
+;         (set_option_value  trace-length 500)
+P;HTML|
+;         (set_option_value  trace-on-overtime 4.0)
+P;HTML|
+;          (set_debug  overtime 4.0)
+P;HTML|
+;         (set_option_value  trace-on-overflow 1000)
+P;HTML|
+;          (set_debug  overflow 1000)
+P;HTML|
+;         (set_option_value  trace-on-eval false)
+P;HTML|
+;          (set_debug  eval false)
+P;HTML|
+;         (set_option_value  trace-on-load silent)
+P;HTML|
+;          (set_debug  load silent)
+P;HTML|
+;          (set_debug  trace-on-load false)
+P;HTML|
+;         (set_option_value  trace-on-exec false)
+P;HTML|
+;          (set_debug  exec false)
+P;HTML|
+;         (set_option_value  trace-on-error non-type)
+P;HTML|
+;          (set_debug  error non-type)
+P;HTML|
+;         (set_option_value  trace-on-fail false)
+P;HTML|
+;          (set_debug  fail false)
+P;HTML|
+;         (set_option_value  trace-on-test true)
+P;HTML|
+;          (set_debug  test true)
+P;HTML|
+;         (set_option_value  repl-on-error true)
+P;HTML|
+;         (set_option_value  repl-on-fail false)
+P;HTML|
+;         (set_option_value  exit-on-fail false)
+P;HTML|
+;         (set_option_value  repl auto)
+P;HTML|
+;         (set_option_value  prolog false)
+P;HTML|
+;         (set_option_value  exec noskip)
+P;HTML|
+;         (set_option_value  maximum-result-count inf)
+P;HTML|
+;         (set_option_value  html false)
+P;HTML|
+;         (set_option_value  python true)
+P;HTML|
+;         (set_option_value  trace-on-test false)
+P;HTML|
+;          (set_debug  test false)
+P;HTML|
+;         (set_option_value  trace-on-fail false)
+P;HTML|
+;          (set_debug  fail false)
+P;HTML|
+;         (set_option_value  load show)
+P;HTML|
+;         (set_option_value  test true)
+[()]
+[()]
+[()]
+[()]
+P;HTML|
+;         (maybe_halt  7)
+<span class="ansi31"
+>(in  (maybe_halt  7) (unwind  (halt  7)))
+</span>
+Script done on 2024-10-19 20:47:49+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

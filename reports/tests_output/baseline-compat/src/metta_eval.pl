@@ -696,6 +696,7 @@ equal_enough(R,V):- is_list(R),is_list(V),sort_univ(R,RR),sort_univ(V,VV),!,equa
 equal_enough(R,V):- copy_term(R,RR),copy_term(V,VV),equal_enouf(R,V),!,R=@=RR,V=@=VV.
 equal_enouf(R,V):- is_ftVar(R), is_ftVar(V), R=V,!.
 equal_enouf(X,Y):- is_blank(X),!,is_blank(Y).
+equal_enouf(R,V):- py_is_py(R),py_is_py(V),py_pp_str(R,RR),py_pp_str(V,VV),!,RR=VV.
 equal_enouf(X,Y):- symbol(X),symbol(Y),atom_concat('&',_,X),atom_concat('Grounding',_,Y).
 equal_enouf(R,V):- R=@=V, R=V, !.
 equal_enouf(_,V):- V=@='...',!.
@@ -2497,12 +2498,12 @@ len_or_unbound(_,_).
 :- nodebug(metta('defn')).
 
 eval_maybe_defn(Eq,RetType,Depth,Self,X,Res):-
+    \+ fail_on_constructor,
    \+  \+ (curried_arity(X,F,A),
            is_metta_type_constructor(Self,F,AA),
            ( \+ AA\=A ),!,
            if_trace(e,color_g_mesg('#772000',
                  indentq2(Depth,defs_none_cached((F/A/AA)=X))))),!,
-   \+ fail_on_constructor,
    eval_constructor(Eq,RetType,Depth,Self,X,Res).
 eval_maybe_defn(Eq,RetType,Depth,Self,X,Y):- can_be_ok(eval_maybe_defn,X),!,
       trace_eval(eval_defn_choose_candidates(Eq,RetType),'defn',Depth,Self,X,Y).

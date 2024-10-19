@@ -355,8 +355,6 @@ import_metta1(Self, RelFilename):-
     exists_file(RelFilename),
     % Convert the relative filename to an absolute path.
     absolute_file_name(RelFilename, Filename),
-    % Generate a temporary file based on the absolute filename.
-    gen_tmp_file(fail, Filename),
     % Extract the directory path from the filename.
     directory_file_path(Directory, _, Filename),
     % Register the file in the Prolog knowledge base as being part of the Metta context.
@@ -772,27 +770,45 @@ load_metta_file_stream_fast(_Size, _P2, Filename, Self, _In) :-
     ;   (fbugio(deleting(BufferFile)),delete_file(BufferFile), fail)
     ).
 
-load_metta_file_stream_fast(_Size,P2,Filename,Self,In):-
+load_metta_file_stream_fast(_Size,_P2,Filename,Self,In):-
+  make_metta_file_buffer(use_fast_buffer,Filename,In),
+  load_metta_buffer(Self,Filename).
+
+
+
+make_metta_file_buffer(TFMakeFile,Filename,In):-
   % maybe time this
   ((
-      if_t(use_fast_buffer,
+      if_t(TFMakeFile,
          ((symbol_concat(Filename, '.buffer~', BufferFile),
           fbugio(creating(BufferFile)),
           write_bf(BufferFile, ( :- dynamic(metta_file_buffer/5))),
           write_bf(BufferFile, ( :- multifile(metta_file_buffer/5)))))),
-      repeat,
-            my_line_count(In, LineCount),
-            current_read_mode(file,Mode),
-            must_det_ll(call(P2, In,Expr)), %write_src(read_metta=Expr),nl,
-            subst_vars(Expr, Term, [], NamedVarsList),
-            BufferTerm = metta_file_buffer(Mode,Term,NamedVarsList,Filename,LineCount),
-            assertz(BufferTerm),
-            if_t(use_fast_buffer,write_bf(BufferFile,BufferTerm)),
-
+    repeat,    
+    % Count the current line in the input stream
+        
+    %debug(server(xref), "Pos ~w", [Pos]),  % Log the current line number.
+    % Get the current mode for reading the file
+       current_read_mode(file, Mode),
+       % Read and parse the content of the Metta file
+       skip_spaces(In),
+       forall(retract(metta_file_comment(_Line, _Col, _CharPos, '$COMMENT'(Comment, CLine, CCol), CPos)),
+             assertz(metta_file_buffer(+, '$COMMENT'(Comment, CLine, CCol), [], Filename, CPos))),
+       stream_property(In,position(Pos)),
+       read_sexpr(In, Expr),
+       subst_vars(Expr, Term, [], NamedVarsList),
+       % Assert the parsed content into the Metta buffer
+       BufferTerm = metta_file_buffer(Mode, Term, NamedVarsList, Filename, Pos),
+       assertz(BufferTerm),
+       % debug(server(xref), "BufferTerm ~w", [BufferTerm]),  % Log the parsed buffer term.
+       % Optionally write the buffer content to the buffer file
+       if_t(TFMakeFile, write_bf(BufferFile, BufferTerm)),
       flush_output,
-      at_end_of_stream(In),!)),!,
+      at_end_of_stream(In),!)),!.
       %listing(metta_file_buffer/5),
-      load_metta_buffer(Self,Filename).
+      
+
+
 
 always_rebuild_temp:- true.
 

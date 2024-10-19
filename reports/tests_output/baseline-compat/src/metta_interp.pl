@@ -332,6 +332,7 @@ switch_to_mettalog:-
   set_option_value('load',verbose),
   set_option_value('log',true),
   %set_option_value('test',true),
+  forall(mettalog_option_value_def(Name, DefaultValue),set_option_value(Name, DefaultValue)),
   set_output_stream.
 
 switch_to_mettarust:-
@@ -340,6 +341,7 @@ switch_to_mettarust:-
   set_option_value('compat',true),
   set_option_value('log',false),
   set_option_value('test',false),
+  forall(rust_option_value_def(Name, DefaultValue),set_option_value(Name, DefaultValue)),
   set_output_stream.
 
 
@@ -361,86 +363,176 @@ is_pyswip:- current_prolog_flag(os_argv,ArgV),member( './',ArgV).
 current_self(Self):- ((nb_current(self_space,Self),Self\==[])->true;Self='&self').
 :- nb_setval(repl_mode, '+').
 
-%:- set_stream(user_input,tty(true)).
-%:- use_module(library(editline)).
-%:- set_output(user_error).
-%:- set_prolog_flag(encoding,octet).
+
+% Define the option and call help documentation
+option_value_def(Name, DefaultValue) :-
+    all_option_value_name_default_type_help(Name, DefaultValue, _, _, _).
+
+rust_option_value_def(Name, DefaultValue) :-
+    all_option_value_name_default_type_help(Name, MettaLogDV,[DefaultValue|_], _Cmt,_Topic),
+    MettaLogDV \= DefaultValue.
+
+mettalog_option_value_def(Name, MettaLogDV) :-
+    all_option_value_name_default_type_help(Name, MettaLogDV,[DefaultValue|_], _Cmt,_Topic),
+    MettaLogDV \= DefaultValue.
+
+
+:- discontiguous(option_value_name_default_type_help/5).
+:- discontiguous(all_option_value_name_default_type_help/5).
+
+all_option_value_name_default_type_help(Name, DefaultValue, Type, Cmt, Topic):-
+ option_value_name_default_type_help(Name, DefaultValue, Type, Cmt, Topic).
+
+% Compatibility and Modes
+option_value_name_default_type_help('compat', false, [true, false], "Enable all compatibility with MeTTa-Rust", 'Compatibility and Modes').
+option_value_name_default_type_help('compatio', false, [true, false], "Enable IO compatibility with MeTTa-Rust", 'Compatibility and Modes').
+option_value_name_default_type_help(src_indents,  false, [false,true], "Sets the indenting of list printing", 'Compatibility and Modes').
+all_option_value_name_default_type_help('repl', auto, [false, true, auto], "Enter REPL mode (auto means true unless a file argument was supplied)", 'Execution and Control').
+all_option_value_name_default_type_help('prolog', false, [false, true], "Enable or disable Prolog REPL mode", 'Compatibility and Modes').
+option_value_name_default_type_help('devel', false, [false, true], "Developer mode", 'Compatibility and Modes').
+all_option_value_name_default_type_help('exec', noskip, [noskip, skip], "Controls execution during script loading: noskip or skip (don't-skip-include/binds) vs skip-all", 'Execution and Control').
+
+% Resource Limits
+option_value_name_default_type_help('stack-max', 500, [inf,1000,10_000], "Maximum stack depth allowed during execution", 'Resource Limits').
+all_option_value_name_default_type_help('maximum-result-count', inf, [inf,1,2,3,10], "Set the maximum number of results, infinite by default", 'Miscellaneous').
+option_value_name_default_type_help('limit', inf, [inf,1,2,3,10], "Set the maximum number of results, infinite by default", 'Miscellaneous').
+option_value_name_default_type_help('initial-result-count', 10, [inf,10], "For MeTTaLog log mode: print the first 10 answers without waiting for user", 'Miscellaneous').
+
+% Miscellaneous
+option_value_name_default_type_help('answer-format', 'show', ['rust', 'silent', 'detailed'], "Control how results are displayed", 'Output and Logging').
+option_value_name_default_type_help('repeats', true, [true, false], "false to avoid repeated results", 'Miscellaneous').
+option_value_name_default_type_help('time', true, [false, true], "Enable or disable timing for operations (in Rust compatibility mode, this is false)", 'Miscellaneous').
+
+% Testing and Validation
+option_value_name_default_type_help('synth-unit-tests', false, [false, true], "Synthesize unit tests", 'Testing and Validation').
+
+% Optimization and Compilation
+option_value_name_default_type_help('optimize', true, [true, false], "Enable or disable optimization", 'Optimization and Compilation').
+option_value_name_default_type_help('transpiler', 'silent', ['silent', 'verbose'], "Sets the expected level of output from the transpiler", 'Output and Logging').
+option_value_name_default_type_help('compile', 'false', ['false', 'true', 'full'], "Compilation option: 'true' is safe vs 'full' means to include unsafe as well", 'Optimization and Compilation').
+option_value_name_default_type_help('tabling', auto, [auto, true, false], "When to use predicate tabling (memoization)", 'Optimization and Compilation').
+
+% Output and Logging
+option_value_name_default_type_help('log', false, [false, true], "Enable or disable logging", 'Output and Logging').
+all_option_value_name_default_type_help('html', false, [false, true], "Generate HTML output", 'Output and Logging').
+all_option_value_name_default_type_help('python', true, [true, false], "Enable Python functions", 'Output and Logging').
+option_value_name_default_type_help('output', './', ['./'], "Set the output directory", 'Output and Logging').
+option_value_name_default_type_help('exeout', './Sav.gitlab.MeTTaLog', [_], "Output executable location", 'Miscellaneous').
+option_value_name_default_type_help('halt', false, [false, true], "Halts execution after the current operation", 'Miscellaneous').
+
+% Debugging and Tracing
+option_value_name_default_type_help('trace-length', 500, [inf], "Length of the trace buffer for debugging", 'Debugging and Tracing').
+option_value_name_default_type_help('trace-on-overtime', 4.0, [inf], "Trace if execution time exceeds limit", 'Debugging and Tracing').
+option_value_name_default_type_help('trace-on-overflow', 1000, [inf], "Trace on stack overflow", 'Debugging and Tracing').
+option_value_name_default_type_help('trace-on-eval', false, [false, true], "Trace during normal evaluation", 'Debugging and Tracing').
+option_value_name_default_type_help('trace-on-load', silent, [silent, verbose], "Verbosity on file loading", 'Debugging and Tracing').
+option_value_name_default_type_help('trace-on-exec', false, [silent, verbose], "Trace on execution during loading", 'Debugging and Tracing').
+option_value_name_default_type_help('trace-on-error', 'non-type', [false, 'non-type', true], "Trace on all or none or non-type errors", 'Debugging and Tracing').
+option_value_name_default_type_help('trace-on-fail', false, [false, true], "Trace on failure", 'Debugging and Tracing').
+option_value_name_default_type_help('trace-on-test', true, [silent, false, verbose], "Trace on success as well", 'Debugging and Tracing').
+option_value_name_default_type_help('repl-on-error', true, [false, true], "Drop to REPL on error", 'Debugging and Tracing').
+option_value_name_default_type_help('repl-on-fail',  false, [false, true], "Start REPL on failed unit test", 'Debugging and Tracing').
+option_value_name_default_type_help('exit-on-fail',  false, [true, false], "Rust exits on first Assertion Error", 'Debugging and Tracing').
+
+% Define the possible values for various types
+
+% Verbosity values
+type_value(verbosity_mode, 'silent').  % No output or only critical errors
+type_value(verbosity_mode, 'error').   % Only errors are shown
+type_value(verbosity_mode, 'warn').    % Errors and warnings are shown
+type_value(verbosity_mode, 'info').    % General information (default level)
+type_value(verbosity_mode, 'debug').   % Detailed debug output
+type_value(verbosity_mode, 'trace').   % Extremely detailed output, execution trace
 
 
 
-/*
-Now PASSING NARS.TEC:\opt\logicmoo_workspace\packs_sys\logicmoo_opencog\MeTTa\hyperon-wam\src\pyswip\metta_interp.pl
-C:\opt\logicmoo_workspace\packs_sys\logicmoo_opencog\MeTTa\hyperon-wam\src\pyswip1\metta_interp.pl
-STS1.01)
-Now PASSING TEST-SCRIPTS.B5-TYPES-PRELIM.08)
-Now PASSING TEST-SCRIPTS.B5-TYPES-PRELIM.14)
-Now PASSING TEST-SCRIPTS.B5-TYPES-PRELIM.15)
-Now PASSING TEST-SCRIPTS.C1-GROUNDED-BASIC.15)
-Now PASSING TEST-SCRIPTS.E2-STATES.08)
-PASSING TEST-SCRIPTS.B5-TYPES-PRELIM.02)
-PASSING TEST-SCRIPTS.B5-TYPES-PRELIM.07)
-PASSING TEST-SCRIPTS.B5-TYPES-PRELIM.09)
-PASSING TEST-SCRIPTS.B5-TYPES-PRELIM.11)
-PASSING TEST-SCRIPTS.C1-GROUNDED-BASIC.14)
-PASSING TEST-SCRIPTS.E2-STATES.07)
------------------------------------------
-FAILING TEST-SCRIPTS.D5-AUTO-TYPES.01)
-Now FAILING TEST-SCRIPTS.00-LANG-CASE.03)
-Now FAILING TEST-SCRIPTS.B5-TYPES-PRELIM.19)
-Now FAILING TEST-SCRIPTS.C1-GROUNDED-BASIC.20)
+% Compile modes
+type_value(compile_mode, 'false').  % Compilation is disabled
+type_value(compile_mode, 'true').   % Basic compilation is enabled
+type_value(compile_mode, 'auto').   % Automatically decide based on context
+type_value(compile_mode, 'full').   % Full compilation is enabled
 
-*/
+% Execution modes
+type_value(exec_mode, 'noskip').   % Execution proceeds normally
+type_value(exec_mode, 'skip').   % Execution is skipped
 
+% Fail modes
+type_value(fail_mode, 'repl').   % On failure, drop into REPL
+type_value(fail_mode, 'exit').   % On failure, exit execution
 
-%option_value_def('repl',auto).
-option_value_def('prolog',false).
-option_value_def('compat',auto).
-option_value_def('compatio',true).
-%option_value_def('compatio',false).
-option_value_def('compile',false).
-%option_value_def('compile',true).
-%option_value_def('compile',full).
-option_value_def('tabling',true).
-option_value_def('optimize',true).
-option_value_def(no_repeats,false).
-%option_value_def('time',false).
-option_value_def('test',false).
-option_value_def('html',false).
-option_value_def('python',true).
-%option_value_def('halt',false).
-option_value_def('doing_repl',false).
-option_value_def('test-retval',false).
-option_value_def('exeout','./Sav.gitlab.MeTTaLog').
+% Error handling modes
+type_value(error_mode, 'default').  % Default error handling mode
+type_value(warning_mode, 'default'). % Default warning handling mode
 
-option_value_def('synth_unit_tests',false).
+% Dynamically show all available options with descriptions in the required format, grouped and halt
+show_help_options_no_halt :-
+    findall([Name, DefaultValue, Type, Help, Group],
+            option_value_name_default_type_help(Name, DefaultValue, Type, Help, Group),
+            Options),
+    max_name_length(Options, MaxLen),
+    format("  First value is the default; if a brown value is listed, it is the Rust compatibility default:\n\n"),
+    group_options(Options, MaxLen),!.
 
-option_value_def('trace-length',500).
-option_value_def('stack-max',500).
-option_value_def('trace-on-overtime',4.0).
-option_value_def('trace-on-overflow',false).
-option_value_def('trace-on-error',true).
-option_value_def('trace-on-exec',false).
-option_value_def('trace-on-fail',false).
-option_value_def('trace-on-pass',false).
+show_help_options:-
+    show_help_options_no_halt,
+    halt.
+
+% Calculate the maximum length of option names
+max_name_length(Options, MaxLen) :-
+    findall(Length, (member([Name, _, _, _, _], Options), atom_length(Name, Length)), Lengths),
+    max_list(Lengths, MaxLen).
+
+% Group the options by category and print them
+group_options(Options, MaxLen) :-
+    findall(Group, member([_, _, _, _, Group], Options), Groups),
+    list_to_set(Groups, SortedGroups),
+    print_groups(SortedGroups, Options, MaxLen).
 
 
-option_value_def('exec',true). % vs skip
+% Print options by group with clarification for defaults and Rust compatibility
+print_groups([], _, _).
+print_groups([Group | RestGroups], Options, MaxLen) :-
+    format("   ~w:\n", [Group]),
+    print_group_options(Group, Options, MaxLen),
+    format("\n"),
+    print_groups(RestGroups, Options, MaxLen).
 
-option_value_def('trace-on-load',false).
-option_value_def('load','silent').
+% Print options in each group, aligned to the longest option name, mentioning Rust changes explicitly
+print_group_options(_, [], _).
+print_group_options(Group, [[Name, DefaultValue, Type, Help, Group] | Rest], MaxLen) :-
+    % Remove duplicates from the list of values
+    list_to_set(Type, UniqueValues),
+    list_to_set([DefaultValue|Type], [_,_|UniqueValues2]),
+    % Define the column where the comment should start
+    CommentColumn is 60, % Adjust this number to set the comment column position
+    ( (UniqueValues = [DefaultValue | RestOfValues])
+    ->  % Print default first, then other values, omit empty lists
+        (format_value_list(RestOfValues, CleanRest),
+         ( (CleanRest \= '')
+         ->  format("     --~w~*t=<\033[1;37m~w\033[0m|~w> \033[~dG ~w\n", [Name, MaxLen, DefaultValue, CleanRest, CommentColumn, Help])
+         ;   format("     --~w~*t=<\033[1;37m~w\033[0m> \033[~dG ~w\n", [Name, MaxLen, DefaultValue, CommentColumn, Help])
+         ))
+    ;   % Case 2: If the default value is not first, list default first and mark the first value as Rust-specific
+        (UniqueValues = [RustSpecificValue | _RestOfValues],
+         DefaultValue \= RustSpecificValue)
+    ->  % Print default first, mark the Rust value in brown, then other values, omit empty lists
+        (format_value_list(UniqueValues2, CleanRest),
+         ( (CleanRest \= '')
+         ->  format("     --~w~*t=<\033[1;37m~w\033[0m|\033[38;5;94m~w\033[0m|~w> \033[~dG ~w\n", [Name, MaxLen, DefaultValue, RustSpecificValue, CleanRest, CommentColumn, Help])
+         ;   format("     --~w~*t=<\033[1;37m~w\033[0m|\033[38;5;94m~w\033[0m> \033[~dG ~w\n", [Name, MaxLen, DefaultValue, RustSpecificValue, CommentColumn, Help])
+         ))
+    ),
+    print_group_options(Group, Rest, MaxLen).
 
-option_value_def('trace-on-eval',false).
-option_value_def('eval',silent).
+print_group_options(Group, [_ | Rest], MaxLen) :-
+    print_group_options(Group, Rest, MaxLen).
 
-option_value_def('transpiler',silent).
-option_value_def('result',show).
-
-option_value_def('maximum-result-count',inf). % infinate answers
-
-% MeTTaLog --log mode only
-% if print the first 10 answers without stopping
-option_value_def('initial-result-count',10).
-
+% Helper to print the list of values without square brackets
+format_value_list([], '').
+format_value_list([H], H) :- !.
+format_value_list([H|T], Formatted) :-
+    format_value_list(T, Rest),
+    format(atom(Formatted), "~w|~w", [H, Rest]).
 
 
 
@@ -468,19 +560,20 @@ on_set_value(_Note,compatio,true):- switch_to_mettarust.
 on_set_value(Note,N,V):- symbol(N), symbol_concat('trace-on-',F,N),fbugio(Note,set_debug(F,V)),set_debug(F,V).
 on_set_value(Note,N,V):- symbol(N), is_debug_like(V,TF),fbugio(Note,set_debug(N,TF)),set_debug(N,TF).
 
+
+%is_debug_like(false, false).
 is_debug_like(trace, true).
 is_debug_like(notrace, false).
 is_debug_like(debug, true).
 is_debug_like(nodebug, false).
 is_debug_like(silent, false).
-%is_debug_like(false, false).
 
 'is-symbol'(X):- symbol(X).
 %:- (is_mettalog->switch_to_mettalog;switch_to_mettarust).
 
 set_is_unit_test(TF):-
   forall(option_value_def(A,B),set_option_value_interp(A,B)),
-  set_option_value_interp('trace-on-pass',false),
+  set_option_value_interp('trace-on-test',false),
   set_option_value_interp('trace-on-fail',false),
   set_option_value_interp('load',show),
   set_option_value_interp('test',TF),
@@ -506,8 +599,8 @@ real_notrace(Goal) :-
 
 
 :- dynamic(is_answer_output_stream/2).
-answer_output(Stream):- is_testing,original_user_output(Stream),!.
-answer_output(Stream):- !,original_user_output(Stream),!. % yes, the cut is on purpose
+%answer_output(Stream):- is_testing,original_user_output(Stream),!.
+%answer_output(Stream):- !,original_user_output(Stream),!. % yes, the cut is on purpose
 answer_output(Stream):- is_answer_output_stream(_,Stream),!.
 answer_output(Stream):- tmp_file('answers',File),
    open(File,write,Stream,[encoding(utf8)]),
@@ -516,9 +609,10 @@ answer_output(Stream):- tmp_file('answers',File),
 write_answer_output:-
   retract(is_answer_output_stream(File,Stream)),!,
   ignore(catch_log(close(Stream))),
-  sformat(S,'cat ~w',[File]),
-  catch_log(ignore(shell(S))),nl.
+  read_file_to_string(File,String,[encoding(utf8)]),
+  write(String).
 write_answer_output.
+:- at_halt(write_answer_output).
 
 
 null_io(G):- null_user_output(Out), !, with_output_to(Out,G).
@@ -528,9 +622,185 @@ with_output_to_s(Out,G):- current_output(COut),
   redo_call_cleanup(set_prolog_IO(user_input, Out,user_error), G,
                      set_prolog_IO(user_input,COut,user_error)).
 
- in_answer_io(_):- nb_current(suspend_answers,true),!.
- in_answer_io(G):- answer_output(Out), !, with_output_to(Out,G).
  not_compatio(G):- if_t(once(is_mettalog;is_testing),user_err(G)).
+
+ extra_answer_padding(_).
+
+
+%!  in_answer_io(+G) is det.
+%
+%   Main predicate for executing a goal while capturing its output and handling it appropriately.
+%   This predicate first checks if the answer output is suspended via `nb_current/2`.
+%   If output is not suspended, it captures the output based on the streams involved.
+%
+%   @arg G The goal to be executed.
+in_answer_io(_):- nb_current(suspend_answers,true),!.
+in_answer_io(G) :-
+    % Get the answer_output stream
+    answer_output(AnswerOut),
+    % Get the current output stream
+    current_output(CurrentOut),
+    % Get the standard output stream via file_no(1)
+    get_stdout_stream(StdOutStream),
+    % If the output is already visible to the user, execute G directly
+   ((   AnswerOut == CurrentOut ;   AnswerOut == StdOutStream )
+    ->  call(G)
+    ; ( % Otherwise, capture and process the output
+        % Determine the encoding
+        stream_property(CurrentOut, encoding(CurrentEncoding0)),
+        (   CurrentEncoding0 == text
+        ->  stream_property(AnswerOut, encoding(CurrentEncoding))
+        ;   CurrentEncoding = CurrentEncoding0
+        ),
+        % Start capturing output per solution
+        capture_output_per_solution(G, CurrentOut, AnswerOut, StdOutStream, CurrentEncoding))).
+
+%!  get_stdout_stream(-StdOutStream) is det.
+%
+%   Helper predicate to retrieve the standard output stream.
+%This uses `current_stream/3` to find the stream associated with file descriptor 1 (stdout).
+%
+%@argStdOutStreamUnifieswiththestandardoutputstream.
+get_stdout_stream(StdOutStream) :-
+    current_stream(_, write, StdOutStream),
+    stream_property(StdOutStream, file_no(1)),!.
+
+%!  capture_output_per_solution(+G, +CurrentOut, +AnswerOut, +StdOutStream, +CurrentEncoding) is det.
+%
+%   Captures and processes the output for each solution of a nondeterministic goal.
+%Usesamemoryfiletotemporarilystoretheoutputandthenfinalizestheoutputhandling.
+%
+%@argGThegoalwhoseoutputisbeingcaptured.
+%@argCurrentOutThecurrentoutputstream.
+%@argAnswerOutTheansweroutputstream.
+%@argStdOutStreamThestandardoutputstream.
+%@argCurrentEncodingTheencodingusedforcapturingandwritingoutput.
+capture_output_per_solution(G, CurrentOut, AnswerOut, StdOutStream, CurrentEncoding) :-
+    % Prepare initial memory file and write stream
+    State = state(_, _),
+    set_output_to_memfile(State, CurrentEncoding),
+    % Use setup_call_catcher_cleanup to handle execution and cleanup
+    setup_call_catcher_cleanup(
+        true,
+        (
+           (call(G),
+            % Check determinism after G succeeds
+            deterministic(Det)),
+            % Process the captured output
+            process_and_finalize_output(State, CurrentOut, AnswerOut, StdOutStream, CurrentEncoding),
+            % If there are more solutions, prepare for the next one
+            (   Det == false
+            ->  % Prepare a new memory file and write stream for the next solution
+                set_output_to_memfile(State,CurrentEncoding)
+            ;   % If deterministic, leave cleanup for process_and_finalize_output
+                true
+            )
+        ),
+        Catcher,
+        (
+            % Final cleanup
+            process_and_finalize_output(State, CurrentOut, AnswerOut, StdOutStream, CurrentEncoding)
+        )
+    ),
+    % Handle exceptions and failures
+    handle_catcher(Catcher).
+
+%!  set_output_to_memfile(+State, +CurrentEncoding) is det.
+%
+%   Creates a new memory file and write stream for capturing output and updates the State.
+%   This predicate also sets the output stream to the new memory file's write stream.
+%
+%   @arg State The state holding the memory file and write stream.
+%   @arg CurrentEncoding The encoding to use for the memory file.
+set_output_to_memfile(State,CurrentEncoding):-
+    % Create a new memory file.
+    new_memory_file(NewMemFile),
+    % Open the memory file for writing with the specified encoding.
+    open_memory_file(NewMemFile, write, NewWriteStream, [encoding(CurrentEncoding)]),
+    % Update the state with the new memory file and write stream (non-backtrackable).
+    nb_setarg(1, State, NewMemFile),
+    nb_setarg(2, State, NewWriteStream),
+    % Redirect output to the new write stream.
+    set_output(NewWriteStream).
+
+%!  process_and_finalize_output(+State, +CurrentOut, +AnswerOut, +StdOutStream, +CurrentEncoding) is det.
+%
+%   Finalizes the captured output, closing streams and writing content to the necessary output streams.
+%   This also handles freeing up memory resources and transcodes content if necessary.
+%
+%   @arg State The current state holding the memory file and write stream.
+%   @arg CurrentOut The original output stream to restore after processing.
+%   @arg AnswerOut The stream to write the captured output to.
+%   @arg StdOutStream The standard output stream.
+%   @arg CurrentEncoding The encoding used for reading and writing the output.
+process_and_finalize_output(State, CurrentOut, AnswerOut, StdOutStream, CurrentEncoding) :-
+    % Retrieve the memory file and write stream from the state.
+    arg(1, State, MemFile),
+    arg(2, State, WriteStream),
+    % Close the write stream to flush the output
+    (nonvar(WriteStream) -> (close(WriteStream),nb_setarg(2, State, _)) ; true),
+    % Reset the output stream to its original state
+    set_output(CurrentOut),
+    % Read the captured content from the memory file
+    (nonvar(MemFile) -> 
+      (nb_setarg(1, State, _),
+       open_memory_file(MemFile, read, ReadStream, [encoding(CurrentEncoding)]),
+       read_string(ReadStream, _, Content),
+       close(ReadStream),
+       % Free the memory file
+       free_memory_file(MemFile),       
+       % Write the content to the streams, handling encoding differences
+       write_to_stream(AnswerOut, Content, CurrentEncoding),
+       (   AnswerOut \== StdOutStream ->  nop(write_to_stream(user_error, Content, CurrentEncoding)) ;   true )) ; true).
+    
+
+%!  handle_catcher(+Catcher) is det.
+%
+%   Handles the `setup_call_catcher_cleanup/4` catcher to determine how to proceed after execution.
+%
+%   @arg Catcher The result of the call (either success, failure, or exception).
+handle_catcher(Var) :-
+    % If the catcher is unbound, the call succeeded.
+    var(Var), !.
+handle_catcher(exit).  % Success, do nothing.
+handle_catcher(fail) :- fail.  % Failure, propagate it.
+handle_catcher(exception(Exception)) :- throw(Exception).  % Exception, re-throw it.
+
+%!  write_to_stream(+Stream, +Content, +ContentEncoding) is det.
+%
+%   Writes the given content to the specified stream, handling encoding differences between the content and the stream.
+%
+%   @arg Stream The stream to write to.
+%   @arg Content The content to be written.
+%   @arg ContentEncoding The encoding of the content.
+write_to_stream(Stream, Content, ContentEncoding) :-
+  % Retrieve the encoding of the destination stream.
+  stream_property(Stream, encoding(StreamEncoding)),
+  transcode_content(Content, ContentEncoding, StreamEncoding, TranscodedContent),
+  with_output_to(Stream, write(TranscodedContent)).
+
+%!  transcode_content(+Content, +FromEncoding, +ToEncoding, -TranscodedContent) is det.
+%
+%   Transcodes content from one encoding to another by writing it to a temporary memory file.
+%
+%   @arg Content The original content.
+%   @arg FromEncoding The encoding of the original content.
+%   @arg ToEncoding The target encoding.
+%   @arg TranscodedContent The resulting content in the target encoding.
+transcode_content(Content, SameEncoding, SameEncoding, Content) :- !.
+transcode_content(Content, FromEncoding, ToEncoding, TranscodedContent) :-
+    % Write the content to a temporary memory file with the original encoding.
+    new_memory_file(TempMemFile),
+    open_memory_file(TempMemFile, write, TempWriteStream, [encoding(FromEncoding)]),
+    write(TempWriteStream, Content),
+    close(TempWriteStream),
+    % Read the content from the memory file with the target encoding.
+    open_memory_file(TempMemFile, read, TempReadStream, [encoding(ToEncoding), encoding_errors(replace)]),
+    read_string(TempReadStream, _, TranscodedContent),
+    close(TempReadStream),
+    % Free the temporary memory file.
+    free_memory_file(TempMemFile).
+
 
 %if_compatio(G):- if_t(is_compatio,user_io(G)).
 % if_compat_io(G):- if_compatio(G).
@@ -538,9 +808,9 @@ not_compat_io(G):- not_compatio(G).
 non_compat_io(G):- not_compatio(G).
 
 
+trace_on_pass:- false.
 trace_on_fail:-     option_value('trace-on-fail',true).
 trace_on_overflow:- option_value('trace-on-overflow',true).
-trace_on_pass:-     option_value('trace-on-pass',true).
 doing_repl:-     option_value('doing_repl',true).
 if_repl(Goal):- doing_repl->call(Goal);true.
 
@@ -1079,7 +1349,8 @@ show_transpiler:- preview_compiler.
 
 option_switch_pred(F):-
   current_predicate(F/0),interpreter_source_file(File),
-  source_file(F, File), \+ \+ (member(Prefix,[is_,show_,trace_on_]), symbol_concat(Prefix,_,F)).
+  source_file(F, File), \+ \+ (member(Prefix,[is_,show_,trace_on_]), symbol_concat(Prefix,_,F)),
+  F \== show_help_options.
 
 do_show_option_switches :-
   forall(option_switch_pred(F),(call(F)-> writeln(yes(F)); writeln(not(F)))).
@@ -1768,7 +2039,6 @@ do_loon:-
    write_answer_output,
    maybe_halt(7)]))),!.
 
-
 need_interaction:- \+ option_value('had_interaction',true),
    \+ is_converting,  \+ is_compiling, \+ is_pyswip,!,
     option_value('prolog',false), option_value('repl',false),  \+ metta_file(_Self,_Filename,_Directory).
@@ -1924,7 +2194,7 @@ fix_message_hook:-
 
 :- ensure_loaded(metta_python).
 :- ensure_loaded(metta_corelib).
-:- ensure_loaded(metta_help).
+%:- ensure_loaded(metta_help).
 :- initialization(use_corelib_file).
 
 :- ignore(((
